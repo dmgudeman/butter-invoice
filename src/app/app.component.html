@@ -1,8 +1,11 @@
-<h1>
-  {{title}}
-</h1>
-<ul>
-  <li *ngFor="let test of practice">
-    {{test.name}}
-  </li>
-</ul>
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container">
+    <a class="navbar-brand">Angular Router</a>
+    <ul class="nav navbar-nav" routerLinkActive="active">
+      <li class="nav-item"><a class="nav-link" routerLink="client">Client</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="about">About</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="courses">Courses</a></li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
