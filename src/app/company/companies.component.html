@@ -1,4 +1,7 @@
-<div *ngFor="let companyRow of companies" class="outer-div row">
+ 
+
+<div *ngFor="let companyRow of companies" class="co-box row">
+    <div class=" co-box" >
     <div class="col-sm-12 col-med-6" [ngStyle]="{'background-color': companyRow[0].color}">
         <div class="media">
             <div class="media-heading clearfix">
@@ -31,6 +34,7 @@
                        value=" + Add">
             </div>
         </div>
+    </div>
     </div>
 </div>
 
