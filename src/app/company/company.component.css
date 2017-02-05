@@ -1,50 +1,39 @@
 .media-body {
    width: 300px;
-   line-height: 2.75;
+   line-height: 1;
 
 }
 .media-heading {
    width: 300px;
    text-align: left;
    padding-left: 30px;
-   line-height: 3.5;
-   border-radius: 5px 5px 0px 0px;
-   
-   border-style: solid;
-   border-color: green;
-   border-style: solid;
+   line-height: 2;
+   border-radius: 10px 10px 0px 0px;
+  
+   border-style: none;
    border-width: 1px;
-   background-color: green;
+   border-color: rgba(0 0 0 0);
+ 
+   font-size: 25px;
 }
+
+
+
 .media-body .button {
    width: 149px;
-    border-style: solid;
-   border-color: green;
-   border-style: solid;
-   border-width: 1px;
-   background-color: green;
+   height: 35px;
+   background-color:rgba(0 0 0 0);
+    border-style: none;
    
 }
 .right {
    float: right;
-   border-radius: 0px 0px 5px 0px;
-   margin-right: 1px;
 }
-.left {
-   border-radius: 0px 0px 0px 5px;
-}
-.media {
-   
-}
-form {
-   background-color: red;
-   width: 300px;
-   border-radius: 5px;
-}
+
+
 .little-rt-btn {
-   background-color: #4CAF50; /* Green */
+   background-color: rgba(0, 153, 51, 0);
     border: none;
-    color: white;
     padding: 0px;
     margin: 0px;
   
@@ -55,9 +44,31 @@ form {
     float: right;
     height: 25px;
     padding: 0px 10px 0px 0px;
+    border-radius: 5px 10px 5px 5px;
     
 }
-.short-line {
-   line-height: .5;
+
+.outer-div {
+    list-style-type: none;
+    background-color: red;
+    width: 300px;
+    border-radius: 10px;
+     padding-bottom: 10px;
+     margin-bottom: 10px;
+    
+     
+}
+li .green{
+     
+     background-color: green;
+}
+
+li .red{
    
+     background-color: red;
+}
+
+li .blue{
+    
+     background-color: blue;
 }

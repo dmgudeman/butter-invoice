@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { ClientService } from './client.service';
+import { CompanyService } from './company/company.service';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { CompanyComponent } from './company/company.component';
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     HttpModule
   ],
   providers: [
-    ClientService
+    ClientService,
+    CompanyService
   ],
   bootstrap: [AppComponent]
 })
