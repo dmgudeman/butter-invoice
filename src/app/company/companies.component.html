@@ -1,39 +1,37 @@
  
 
-<div *ngFor="let companyRow of companies" class="co-box row">
+<div *ngFor="let companyRow of companies" class="co-box">
     <div class=" co-box" >
     <div class="col-sm-12 col-med-6" [ngStyle]="{'background-color': companyRow[0].color}">
-        <div class="media">
-            <div class="media-heading clearfix">
+            <div class="co-heading">
                 {{companyRow[0].name}}
                 <span class="short-line">
             <input type="button" class="little-rt-btn" value="edit">
           </span>
             </div>
-            <div class="media-body">
-                <input type="button" class="button co-button co-left " [ngStyle]="{'background-color': companyRow[0].color}"
+            <div>
+                <input type="button" class="co-button co-left" [ngStyle]="{'background-color': companyRow[0].color}"
                        value="Export Invoice">
-                <input type="button" class="button co-button co-right" [ngStyle]="{'background-color': companyRow[0].color}"
+                <input type="button" class="co-button co-right" [ngStyle]="{'background-color': companyRow[0].color}"
                        value=" + Add">
             </div>
-        </div>
     </div>
+    </div>
+    <div class="co-box">
     <div *ngIf="companyRow.length > 1" class="col-sm-12 col-med-6"
          [ngStyle]="{'background-color': companyRow[1].color}">
-        <div class="media">
-            <div class="media-heading clearfix">
+            <div class="co-heading">
                 {{companyRow[1].name}}
                 <span class="short-line">
             <input type="button" class="little-rt-btn" value="edit">
           </span>
             </div>
-            <div class="media-body">
+            <div>
                 <input type="button" class="button left" [ngStyle]="{'background-color': companyRow[1].color}"
                        value="Export Invoice">
                 <input type="button" class="button right" [ngStyle]="{'background-color': companyRow[1].color}"
                        value=" + Add">
             </div>
-        </div>
     </div>
     </div>
 </div>

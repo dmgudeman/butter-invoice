@@ -6,13 +6,16 @@
 .co-box {
     position: relative;
     display: inline-block;
-    width: 300px;
-    height: 100px;
-    list-style-type: none;
-    
+   
     border-radius: 10px;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
+    width: 300px;
+    height: 150px;
+    list-style-type: none;
+    border: solid;
+    border-color: red;
+  
+    padding-bottom: 40px;
+    margin-bottom: 40px;
     color: antiquewhite;
 }
 
@@ -20,6 +23,7 @@
     height: 50px;
     width: 280px;
     font-size: 25px;
+    border-radius: 10px;
     padding-left: 30px;
     padding-top: 20px;
    
@@ -28,7 +32,8 @@
 .co-button {
     height:50px;
     width:150px;
-    border: none;
+     border-radius: 10px;
+ 
     font-size: 80%;
 }
 
