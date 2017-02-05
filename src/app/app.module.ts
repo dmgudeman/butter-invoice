@@ -12,11 +12,12 @@ import { CompanyService } from './company/company.service';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { CompanyComponent } from './company/company.component';
+import { CompaniesComponent } from './company/companies.component';
 
 const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home-app', component: HomeComponent },
-  { path: 'client',      component: ClientComponent },
+  // { path: 'client',      component: ClientComponent },
   // {
   //   path: 'heroes',
   //   component: HeroListComponent,
@@ -26,7 +27,7 @@ const appRoutes: Routes = [
   //   redirectTo: '/heroes',
   //   pathMatch: 'full'
   // },
-  // { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: HomeComponent }
 ];
 
 
@@ -36,7 +37,7 @@ const appRoutes: Routes = [
     ClientComponent,
     NavbarComponent,
     HomeComponent,
-    CompanyComponent
+    CompaniesComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -1,0 +1,36 @@
+<div *ngFor="let companyRow of companies" class="outer-div row">
+    <div class="col-sm-12 col-med-6" [ngStyle]="{'background-color': companyRow[0].color}">
+        <div class="media">
+            <div class="media-heading clearfix">
+                {{companyRow[0].name}}
+                <span class="short-line">
+            <input type="button" class="little-rt-btn" value="edit">
+          </span>
+            </div>
+            <div class="media-body">
+                <input type="button" class="button left" [ngStyle]="{'background-color': companyRow[0].color}"
+                       value="Export Invoice">
+                <input type="button" class="button right" [ngStyle]="{'background-color': companyRow[0].color}"
+                       value=" + Add">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="companyRow.length > 1" class="col-sm-12 col-med-6"
+         [ngStyle]="{'background-color': companyRow[1].color}">
+        <div class="media">
+            <div class="media-heading clearfix">
+                {{companyRow[1].name}}
+                <span class="short-line">
+            <input type="button" class="little-rt-btn" value="edit">
+          </span>
+            </div>
+            <div class="media-body">
+                <input type="button" class="button left" [ngStyle]="{'background-color': companyRow[1].color}"
+                       value="Export Invoice">
+                <input type="button" class="button right" [ngStyle]="{'background-color': companyRow[1].color}"
+                       value=" + Add">
+            </div>
+        </div>
+    </div>
+</div>
+
