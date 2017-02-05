@@ -15,7 +15,7 @@ export class CompaniesComponent implements OnInit {
   constructor(private companyService: CompanyService){};
 
   ngOnInit() {
-    this.companies = this.companyService.getCompaniesMainList();
+    this.companies = this.companyService.getCompanies();
     console.log(this.companies);
   }
 

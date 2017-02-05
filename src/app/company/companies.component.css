@@ -14,8 +14,10 @@
     list-style-type: none;
     border: none;
     margin: 5px;
-    margin-bottom: 40px;
+
+    margin-bottom: 10px;
     color: antiquewhite;
+    padding:0px;
 }
 
 .co-heading {
@@ -31,17 +33,22 @@
 
 .co-button {
     height:50px;
-    width:75pxpx;
+    width:148px;
+    padding: 0px;
+    margin: 0px;
     border: none;
+  
     font-size: 80%;
 }
 
 .co-left {
-
+    margin: 0;
+    margin-right:2px;
     border-bottom-left-radius: 10px;
 }
 .co-right {
    float: right;
+   margin-left:2px;
    border-bottom-right-radius: 10px;
 }
 

@@ -1,38 +1,15 @@
- 
+<div *ngFor="let company of companies">
 
-<div *ngFor="let companyRow of companies">
-
-    <div class="col-sm-12 col-med-6 co-box" [ngStyle]="{'background-color': companyRow[0].color}">
-            <div class="co-heading">
-                {{companyRow[0].name}}
-                <span class="short-line">
+    <div class="col-sm-12 col-med-6 co-box" [ngStyle]="{'background-color': company.color}">
+        <div class="co-heading">
+            {{company.name}}
+            <span class="short-line">
             <input type="button" class="little-rt-btn" value="edit">
           </span>
-            </div>
-            <div>
-                <input type="button" class="co-button co-left" [ngStyle]="{'background-color': companyRow[0].color}"
-                       value="Export Invoice">
-                <input type="button" class="co-button co-right" [ngStyle]="{'background-color': companyRow[0].color}"
-                       value=" + Add">
-            </div>
+        </div>
+        <div>
+            <input type="button" class="co-button co-left" [ngStyle]="{'background-color': company.color}" value="Export Invoice">
+            <input type="button" class="co-button co-right" [ngStyle]="{'background-color': company.color}" value=" + Add">
+        </div>
     </div>
-  
-    
-    <div *ngIf="companyRow.length > 1" class="col-sm-12 col-med-6 co-box"
-         [ngStyle]="{'background-color': companyRow[1].color}">
-            <div class="co-heading">
-                {{companyRow[1].name}}
-                <span class="short-line">
-            <input type="button" class="little-rt-btn" value="edit">
-          </span>
-            </div>
-            <div>
-                <input type="button" class="button co-button co-left" [ngStyle]="{'background-color': companyRow[1].color}"
-                       value="Export Invoice">
-                <input type="button" class="button co-button co-right" [ngStyle]="{'background-color': companyRow[1].color}"
-                       value=" + Add">
-            </div>
-    </div>
-   
 </div>
-
