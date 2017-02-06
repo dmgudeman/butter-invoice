@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
 * {
     box-sizing: border-box;
     font-size: 20px;
@@ -6,7 +6,7 @@
 }
 .co-box {
     position: relative;
-    width: 300px;
+    width: 45%;
     height: 125px;
     display: inline-block;
     
@@ -16,12 +16,13 @@
     margin: 5px;
     margin-bottom: 10px;
     color: antiquewhite;
+    margin-left:25px;
    
 }
 
 .co-heading {
-    height: 50px;
-    width: 280px;
+    height: 60%;
+    width: 80%;
     font-size: 25px;
     padding-left: 30px;
     padding-top: 20px;
@@ -32,12 +33,12 @@
 
 .co-button {
     height:50px;
-    width:148px;
+    width:49%;
     padding: 0px;
-    padding-top: 15px;
+    padding-top: 0px;
     border: none;
     margin: 0px;
-    margin-top:20px;
+    margin-top:0px;
     
     font-size: 80%;
 }
@@ -71,43 +72,50 @@
     font-size: 55%;
 }
 
-li .green{
-     background-color: green;
+.green{
+     background-color: #2ecc71;
+
+}
+ .red{
+     background-color: #e74c3c;
 }
 
-li .red{
-     background-color: red;
+.blue{
+     background-color: #3498db;
+}
+.green.co-button{
+     background-color: #47d583;
+    
 }
 
-li .blue{
-     background-color: blue;
+ .red.co-button{
+     background-color: #eb685a;
+}
+
+.blue.co-button{
+     background-color: #51a7e0;
 }
 .co-nav-main {
-   display: block;
-   float: right;
+   display:block;
+   padding:10px 0px;
    list-style: none;
-   background-color: #000;
-   color:#fff
+   background-color:#34495e;
+   color:#d9e2ea
 }
 .co-nav-logo {
+    display: block;
     margin-left: 0px;
-    width: 75px;
-
-  /*  float:left;
-    position: relative
-*/
+    margin-top:0px;
+    width: 40px;
+    font-family:'IM Fell Great Primer SC', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 0.75;
 }
 .co-nav-title {
-    width: 625px;
-    
-    /*width: 16em;
-    float:left
-    position: relative;*/
-    
-
+    text-align:center;
 }
 .co-nav-plus {
-    float: right;
-    background-color: #000;
-    color:#fff;
+    float:right;
+    background-color: #34495e;
+    color:#d9e2ea;
 }

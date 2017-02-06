@@ -1,25 +1,28 @@
-<div class="container-fluid">
-<div class="row col-sm-4">
-    <span class="co-nav-logo">BI</span>
-<ul class="co-nav-main">
-     
-     <li class="co-nav-title">Current Companies</li>
-     <li><a href="#" class="glyphicon glyphicon-plus co-nav-plus" aria-hidden="true"></a></li>
-</ul>
+<div class="container-fluid" >
+<div class="row co-nav-main">
+    
+
+     <div class="col-sm-4"><span class="co-nav-logo">Better Invoice</span></div>
+     <div class="col-sm-4">Current Companies</div>
+     <div class="col-sm-4"><a href="#" class="glyphicon glyphicon-plus co-nav-plus" aria-hidden="true"></a></div>
+
 </div>
+
 <div *ngFor="let company of companies" >
 
-    <div class="col-sm-12 col-med-6 co-box" [ngStyle]="{'background-color': company.color}">
-        <div class="co-nav-title">
+    <div class="col-sm-12 col-med-6 co-box" [ngClass]="setClasses(company)">
+        <div >
+        <div class="co-heading" >
             {{company.name}}
             <span class="short-line">
             <input type="button" class="little-rt-btn" value="edit">
           </span>
         </div>
         <div>
-            <input type="button" class="co-button co-left" [ngStyle]="{'background-color': company.color}" value="Export Invoice">
-            <input type="button" class="co-button co-right" [ngStyle]="{'background-color': company.color}" value=" + Add">
+            <input type="button" class="co-button co-left" [ngClass]="setClasses(company)" value="Export Invoice">
+            <input type="button" class="co-button co-right" [ngClass]="setClasses(company)" value=" + Add">
         </div>
     </div>
+</div>
 </div>
 </div>
