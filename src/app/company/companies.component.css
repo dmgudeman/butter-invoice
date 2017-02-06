@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Faster+One');
+
 * {
     box-sizing: border-box;
     font-size: 20px;
     max-width: 700px;
+    font-family: 'Lato', Arial, sans-serif;
 }
 .co-box {
     position: relative;
@@ -15,7 +16,7 @@
     border: none;
     margin: 5px;
     margin-bottom: 10px;
-    color: antiquewhite;
+    color: #f2f2f2;
     margin-left:25px;
    
 }
@@ -73,19 +74,25 @@
 }
 
 .green{
-     background-color: #2ecc71;
+     background-color: #00C853;
 
 }
  .red{
      background-color: #e74c3c;
+}
+.brown{
+    background-color:#8D6E63;
 }
 
 .blue{
      background-color: #3498db;
 }
 .green.co-button{
-     background-color: #47d583;
+     background-color: #00d95a;
     
+}
+.brown.co-button{
+     background-color: #795548;
 }
 
  .red.co-button{
@@ -93,14 +100,14 @@
 }
 
 .blue.co-button{
-     background-color: #51a7e0;
+     background-color: #2487c9;
 }
 .co-nav-main {
    display:block;
    padding:10px 0px;
    list-style: none;
    background-color:#34495e;
-   color:#d9e2ea
+   color:#f2f2f2
 }
 .co-nav-logo {
     display: block;
@@ -113,9 +120,10 @@
 }
 .co-nav-title {
     text-align:center;
+    font-family:'Lato:300';
 }
 .co-nav-plus {
     float:right;
     background-color: #34495e;
-    color:#d9e2ea;
+    color:#f2f2f2;
 }

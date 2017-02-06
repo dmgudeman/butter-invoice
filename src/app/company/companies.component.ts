@@ -30,12 +30,14 @@ setClasses(company:Company) {
   let red:boolean = (company.color==='red');
   let green = (company.color==='green');
   let blue = (company.color==='blue');
+  let brown = (company.color==='brown');
   
   console.log(company.color,red,green,blue);
   let classes={
     red: red,
     green: green,
-    blue: blue
+    blue: blue,
+    brown: brown
   };
   console.log("classes = " + JSON.stringify(classes));
   return classes

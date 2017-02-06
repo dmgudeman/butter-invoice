@@ -3,7 +3,7 @@ import {Company} from './company';
 export class CompanyService {
     companies: any[] = [{name: "Exxon", color: "green"}, {name: "Texaco", color: "blue"}, {
         name: "Sinclair",
-        color: "red"
+        color: "brown"
     }];
 
     getCompanies() {
