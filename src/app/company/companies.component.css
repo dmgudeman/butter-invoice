@@ -82,4 +82,32 @@ li .red{
 li .blue{
      background-color: blue;
 }
+.co-nav-main {
+   display: block;
+   float: right;
+   list-style: none;
+   background-color: #000;
+   color:#fff
+}
+.co-nav-logo {
+    margin-left: 0px;
+    width: 75px;
 
+  /*  float:left;
+    position: relative
+*/
+}
+.co-nav-title {
+    width: 625px;
+    
+    /*width: 16em;
+    float:left
+    position: relative;*/
+    
+
+}
+.co-nav-plus {
+    float: right;
+    background-color: #000;
+    color:#fff;
+}
