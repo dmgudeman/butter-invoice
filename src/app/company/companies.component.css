@@ -3,15 +3,16 @@
     box-sizing: border-box;
     font-size: 20px;
     max-width: 700px;
-    font-family: 'Lato', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight:300;
 }
 .co-box {
     position: relative;
     width: 45%;
-    height: 125px;
+    height: 100px;
     display: inline-block;
     
-    padding:0px; 
+    padding:0px;
     border-radius: 10px;
     border: none;
     margin: 5px;
@@ -22,25 +23,29 @@
 }
 
 .co-heading {
-    height: 60%;
+    height: 50%;
     width: 80%;
-    font-size: 25px;
+    font-size: 100%;
     padding-left: 30px;
-    padding-top: 20px;
-    border-radius: 10px;
+    padding-top: 10px;
+    border-radius: 7px;
     margin-bottom: 10px;
+   
    
 }
 
+/* -------------------------------------------*/
+/*                BUTTONS                     */
+/* -------------------------------------------*/
+
 .co-button {
-    height:50px;
+    height:40px;
     width:49%;
     padding: 0px;
     padding-top: 0px;
     border: none;
     margin: 0px;
     margin-top:0px;
-    
     font-size: 80%;
 }
 
@@ -54,6 +59,7 @@
    border-bottom-right-radius: 10px;
    margin-top: 10px;
    margin-left:2px;
+   font-weight:600;
    
 }
 
@@ -102,6 +108,10 @@
 .blue.co-button{
      background-color: #2487c9;
 }
+
+/* -------------------------------------------*/
+/*                NAVBAR                      */
+/* -------------------------------------------*/
 .co-nav-main {
    display:block;
    padding:10px 0px;
