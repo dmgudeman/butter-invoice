@@ -6,9 +6,44 @@
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight:300;
 }
+/* -------------------------------------------*/
+/*                NAVBAR                      */
+/* -------------------------------------------*/
+.co-nav-main {
+   
+   padding:10px 0px;
+   list-style: none;
+   background-color:#34495e;
+   color:#f2f2f2
+}
+.co-nav-logo {
+    display: block-inline;
+    margin-left: 0px;
+    margin-top:0px;
+    width: 20px;
+    font-family:'IM Fell Great Primer SC', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 0.75;
+}
+.co-nav-title {
+     display: block-inline;
+    
+    font-family:'Lato:300';
+}
+.co-nav-plus {
+    display: block-inline;
+    float:right;
+    margin-right: 25px;
+    font-size:30px;
+    font-weight:700;
+    background-color: #34495e;
+    color:#f2f2f2;
+}
+/*----------------------------------------------------*/
+/*               COMPANY BOX                          */
+/*----------------------------------------------------*/
 .co-box {
-    position: relative;
-    width: 45%;
+    width: 300px; 
     height: 100px;
     display: inline-block;
     
@@ -23,13 +58,13 @@
 }
 
 .co-heading {
-    height: 50%;
-    width: 80%;
+    height: 50px;
+    width: 80px;
     font-size: 100%;
     padding-left: 30px;
     padding-top: 10px;
     border-radius: 7px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
    
    
 }
@@ -40,7 +75,7 @@
 
 .co-button {
     height:40px;
-    width:49%;
+    width:147px;
     padding: 0px;
     padding-top: 0px;
     border: none;
@@ -109,32 +144,3 @@
      background-color: #2487c9;
 }
 
-/* -------------------------------------------*/
-/*                NAVBAR                      */
-/* -------------------------------------------*/
-.co-nav-main {
-   display:block;
-   padding:10px 0px;
-   list-style: none;
-   background-color:#34495e;
-   color:#f2f2f2
-}
-.co-nav-logo {
-    display: block;
-    margin-left: 0px;
-    margin-top:0px;
-    width: 40px;
-    font-family:'IM Fell Great Primer SC', Arial, sans-serif;
-    font-size: 20px;
-    line-height: 0.75;
-}
-.co-nav-title {
-    text-align:center;
-    font-family:'Lato:300';
-}
-.co-nav-plus {
-    float:right;
-    font-size:30px;
-    background-color: #34495e;
-    color:#f2f2f2;
-}
