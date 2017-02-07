@@ -14,6 +14,7 @@ import { CompanyService } from './company/company.service';
 import { HomeComponent } from './home/home.component';
 import { CompaniesComponent } from './company/companies.component';
 import { NewItemComponent } from './new-item/new-item.component';
+import { TabsModule } from 'ng2-bootstrap/tabs';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home-app', pathMatch: 'full'},
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    TabsModule.forRoot()
   ],
   providers: [
     ClientService,
