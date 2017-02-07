@@ -16,19 +16,11 @@ import { CompaniesComponent } from './company/companies.component';
 import { NewItemComponent } from './new-item/new-item.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home-app', pathMatch: 'full'},
   { path: 'home-app', component: HomeComponent },
   { path: 'app-new-item', component: NewItemComponent },
   // { path: 'client',      component: ClientComponent },
   // {
-  //   path: 'heroes',
-  //   component: HeroListComponent,
-  //   data: { title: 'Heroes List' }
-  // },
-  // { path: '',
-  //   redirectTo: '/heroes',
-  //   pathMatch: 'full'
-  // },
   { path: '**', component: HomeComponent }
 ];
 
