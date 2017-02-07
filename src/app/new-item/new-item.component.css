@@ -2,7 +2,7 @@
 *{
   box-sizing: border-box;
     font-size: 20px;
-    max-width: 700px;
+    max-width: 1000px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight:300;
  
@@ -32,7 +32,7 @@ display: inline-block;
 /*-----------------------------------------------------*/
 div.ni-header {
    display: inline-flex;
-
+   margin-top: 25px;
  
 }
 .ni-amount{
@@ -47,22 +47,39 @@ input.ni-time{
 /*-----------------------------------------------------*/
 /*               NEW-ITEM INPUTS                       */
 /*-----------------------------------------------------*/
+form {
+   display:normal;
+}
 label {
+   
    font-size: 75%;
 }
 
 .form-control {
+    
   font-size: 100%;
 }
 
 .ni-date{
-   max-width: 500px
+   display:inline-block;
+   min-width: 342px;
+   max-width: 375px;
+   margin-right:20px
+}
+.ni-date-input{
+ 
 }
 .ni-hours{
-   max-width: 500px;
+   display:inline-block;
+    min-width: 342px;
+    max-width: 375px;
+ 
+}
+.ni-hours-input {
+ 
 }
 .ni-notes {
-    max-width: 500px;
+    max-width: 738px;
     height: 300px;
     resize: none;
     box-sizing: border-box;

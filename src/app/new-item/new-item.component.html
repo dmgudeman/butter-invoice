@@ -8,16 +8,13 @@
 
 </div>
 <div class="ni-header">
-
     <input type="text" class= "ni-time" placeholder="Time" name="ni-time">
- 
     <input type="text" name="ni-amount" class="ni-amount" placeholder="$ Amount">
-     
-
 </div>
 
 <form #f="ngForm" (ngSubmit)="onSubscribe(f.form)">
-    <div class="form-group ni-date">
+    <div class="ni-date">
+    <div class="form-group">
         <label for="date">Date</label>
         <input 
             ngModel
@@ -25,28 +22,33 @@
             #name="ngModel" 
             id="date" 
             type="text" 
-            class="form-control" 
+            class="form-control ni-date-input" 
             required
             minlength="3"
             placeholder="Date">
        
     </div>
+    </div>
+     <div class="ni-hours">
     <div class="form-group ">
+     
         <label for="hours">Hours</label>
         <input 
-      
             ngModel
             name="hours"
             #name="ngModel" 
             id="hours" 
             type="text" 
-            class="form-control   ni-hours" 
+            class="form-control ni-hours " 
             required
             minlength="3"
             placeholder="0">
        
     </div>
+    </div>
+     <div class="ni-notes">
     <div class="form-group">
+     
         <label for="notes">Description/notes</label>
         <textarea 
             ngModel
@@ -59,6 +61,7 @@
             minlength="3"
             placeholder="Type Here">
         </textarea>
+    </div>
     </div>
 </form>
   </div>

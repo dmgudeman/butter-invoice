@@ -10,7 +10,7 @@ import { ClientComponent } from './client/client.component';
 import { ClientService } from './client.service';
 import { CompanyService } from './company/company.service';
 
-import { NavbarComponent } from './navbar/navbar.component';
+
 import { HomeComponent } from './home/home.component';
 import { CompaniesComponent } from './company/companies.component';
 import { NewItemComponent } from './new-item/new-item.component';
@@ -37,7 +37,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ClientComponent,
-    NavbarComponent,
+    
     HomeComponent,
     CompaniesComponent,
     NewItemComponent,
