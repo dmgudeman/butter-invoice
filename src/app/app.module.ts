@@ -13,10 +13,12 @@ import { CompanyService } from './company/company.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { CompaniesComponent } from './company/companies.component';
+import { NewItemComponent } from './new-item/new-item.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home-app', component: HomeComponent },
+  { path: 'app-new-item', component: NewItemComponent },
   // { path: 'client',      component: ClientComponent },
   // {
   //   path: 'heroes',
@@ -38,6 +40,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     HomeComponent,
     CompaniesComponent,
+    NewItemComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
