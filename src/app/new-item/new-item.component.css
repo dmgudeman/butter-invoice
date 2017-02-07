@@ -1,6 +1,11 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 *{
-  font-size: 20px;
-  max-width:500px;
+  box-sizing: border-box;
+    font-size: 20px;
+    max-width: 700px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight:300;
+ 
 }
 /*-----------------------------------------------------*/
 /*               NEW-ITEM NAV                          */
@@ -8,12 +13,17 @@
 .ni-nav{
 
 }
-.ni-nav-back-btn{
+.ni-nav-back-btn{ 
+  font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
    max-width: 25%;
-   float: left;
-
+   
+display: inline-block;
 }
 .ni-nav-back-link {
+   display: inline-block;
    font-size: 100%; 
    font-weight: 600;
 }
@@ -37,7 +47,7 @@ input.ni-time{
 /*-----------------------------------------------------*/
 /*               NEW-ITEM INPUTS                       */
 /*-----------------------------------------------------*/
- label {
+label {
    font-size: 75%;
 }
 
@@ -45,10 +55,16 @@ input.ni-time{
   font-size: 100%;
 }
 
-textarea#notes {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
+.ni-date{
+   max-width: 500px
+}
+.ni-hours{
+   max-width: 500px;
+}
+.ni-notes {
+    max-width: 500px;
+    height: 300px;
+    resize: none;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: #fff;

@@ -1,15 +1,8 @@
-<p>
-  new-item works!
-</p>
+
 <div class="container-fluid">
   <div class="col-sm-12 col-med-6 co-box" >
 <div class="ni-nav">
- <i
-        class="glyphicon glyphicon-chevron-left ni-nav ni-nav-back-btn"
-        [class.highlighted] ="myVote == 1">
-       </i> 
-        
-    
+ <i class="glyphicon glyphicon-chevron-left"></i> 
     <span class ="ni-nav-back-link">New Item</span>
 
 
@@ -24,7 +17,7 @@
 </div>
 
 <form #f="ngForm" (ngSubmit)="onSubscribe(f.form)">
-    <div class="form-group">
+    <div class="form-group ni-date">
         <label for="date">Date</label>
         <input 
             ngModel
@@ -38,15 +31,16 @@
             placeholder="Date">
        
     </div>
-    <div class="form-group">
+    <div class="form-group ">
         <label for="hours">Hours</label>
         <input 
+      
             ngModel
             name="hours"
             #name="ngModel" 
             id="hours" 
             type="text" 
-            class="form-control" 
+            class="form-control   ni-hours" 
             required
             minlength="3"
             placeholder="0">
@@ -60,7 +54,7 @@
             #name="ngModel" 
             id="notes" 
             type="textbox" 
-            class="form-control" 
+            class="form-control  ni-notes" 
             required
             minlength="3"
             placeholder="Type Here">
