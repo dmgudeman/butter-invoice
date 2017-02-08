@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { CompaniesComponent } from './company/companies.component';
 import { NewItemComponent } from './new-item/new-item.component';
 import { TabsModule } from 'ng2-bootstrap/tabs';
+import { ItemComponent } from './item/item.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home-app', pathMatch: 'full'},
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
     HomeComponent,
     CompaniesComponent,
     NewItemComponent,
+    ItemComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

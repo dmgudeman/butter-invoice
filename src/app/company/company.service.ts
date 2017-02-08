@@ -1,15 +1,17 @@
 import {Company} from './company';
 
 export class CompanyService {
-    companies: any[] = [{name: "Exxon", color: "green"}, {name: "Texaco", color: "blue"}, {
-        name: "Sinclair",
-        color: "brown"
-    }];
+    companies: Company[] = [
+        {name: "Exxon", color: "green", hourly: 250}, 
+        {name: "Texaco", color: "blue", hourly: 225}, 
+        {name: "Sinclair",color: "brown", hourly: 200}
+        ];
 
-    getCompanies() {
-        return this.companies;
-    }
+    
+   getCompanies(): Promise<Company[]> {
+      return Promise.resolve(this.companies);
 
+   };
     // getCompaniesMainList() {
     //     const companiesRaw = this.companies;
     //     console.log(companiesRaw);
