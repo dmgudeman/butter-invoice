@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FormBuilder, FormGroup, Validators }    from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
@@ -30,7 +30,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ClientComponent,
-    
     HomeComponent,
     CompaniesComponent,
     NewItemComponent,
@@ -40,7 +39,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    FormBuilder
   ],
   providers: [
     ClientService,
