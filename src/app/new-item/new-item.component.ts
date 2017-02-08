@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TabsModule } from 'ng2-bootstrap/tabs';
-import { FormBuilder, FormGroup, Validators }    from '@angular/forms';
+
 @Component({
   selector: 'app-new-item',
   templateUrl: './new-item.component.html',
@@ -10,9 +10,7 @@ export class NewItemComponent implements OnInit {
   date = new Date();
   dateFormat = require('dateformat');
   fdate:Date;
-  constructor(fb: FormBuilder,
-        
-        private _userService: UserService) {
+  constructor() {
    }
 
   ngOnInit() {
