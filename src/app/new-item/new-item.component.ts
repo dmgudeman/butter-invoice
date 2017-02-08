@@ -6,15 +6,20 @@ import { TabsModule } from 'ng2-bootstrap/tabs';
   styleUrls: ['./new-item.component.css']
 })
 export class NewItemComponent implements OnInit {
-
+  date = new Date();
+  dateFormat = require('dateformat');
+  fdate:Date;
   constructor() { }
 
   ngOnInit() {
+    
+    this.fdate = this.dateFormat(this.date, "mm/dd/yyyy");
   }
-  public alertMe(): void {
-    setTimeout(function (): void {
-      alert('You\'ve selected the alert tab!');
-    });
+  
+  updateDate(){
+
+    this.fdate = this.dateFormat(this.fdate, "mm/dd/yyyy")
+   
   }
 
 }

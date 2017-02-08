@@ -21,6 +21,7 @@
                 </tab>
             </tabset>
 
+
             <!--  FORM -->
             <div class="ni-body">
                 <form #f="ngForm" (ngSubmit)="onSubscribe(f.form)">
@@ -29,8 +30,7 @@
 
                             <div class="form-group col-md-6">
                                 <label for="date">Date</label>
-                                <input ngModel name="date" #name="ngModel" id="date" type="text" class="form-control" required minlength="3" placeholder="Date">
-
+                                <input [(ngModel)]=fdate (change)="updateDate()" name="date" #name="ngModel" id="date" type="text" class="form-control" required minlength="3">
 
                             </div>
 
