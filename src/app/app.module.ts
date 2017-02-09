@@ -18,6 +18,8 @@ import { NewItemComponent } from './new-item/new-item.component';
 import { TabsModule } from 'ng2-bootstrap/tabs';
 import { ItemComponent } from './item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
+import { BootexComponent } from './bootex/bootex.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home-app', pathMatch: 'full'},
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
     NewItemComponent,
     ItemComponent,
     InvoiceComponent,
+    BootexComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -46,6 +49,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     TabsModule.forRoot(),
+    FlexLayoutModule.forRoot()
    
   ],
   providers: [

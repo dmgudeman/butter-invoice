@@ -1,13 +1,11 @@
-<div class="container-fluid" >
-<div class="row co-nav-main">
-    
-
-     <div class="col-sm-4"><span class="co-nav-logo">Better Invoice</span></div>
-     <div class="col-sm-4">Current Companies</div>
-     <div class="col-sm-3 co-nav-plus">+</div>
-
-
-
+<div class="flex-container ni-navbar" fxLayout="row" fxLayoutAlign="center center">
+  <div class="flex-item" fxFlex="4%"></div>
+  <div class="flex-item" fxFlex="30%">Better Invoice</div>
+  <div class="flex-item" fxFlex="60%">Current Companies</div>
+  <div class="flex-item" fxFlex="6%">+</div>
+</div>
+<div class="container" >
+<div class="row">
 <div *ngFor="let company of companies" >
 
     <div class="col-sm-12 col-med-6 co-box" [ngClass]="setClasses(company)">
@@ -19,14 +17,15 @@
           </span>
         </div>
         </div>
-        <div class="row">
-            <div class="col co-button co-left" [ngClass]="setClasses(company)"><a href="#"   aria-hidden="true">Export Invoice</a></div>
+        <div class="row ">
+            <div class="col co-button co-left" [ngClass]="setClasses(company)"><a href="#"   class="co-button" aria-hidden="true">Export Invoice</a></div>
 
-            <div class="col co-button co-right" [ngClass]="setClasses(company)"><a [routerLink]="['/app-new-item']"  aria-hidden="true"></a>+Add</div>
+            <div class="col co-button co-right" [ngClass]="setClasses(company)"><a class="co-button" [routerLink]="['/app-new-item']"  aria-hidden="true">+Add</a></div>
 
         </div>
     </div>
 </div>
 </div>
+
 
 </div>
