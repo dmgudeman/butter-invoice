@@ -1,10 +1,35 @@
-<div class="flex-container ni-navbar" fxLayout="row" fxLayoutAlign="center center">
+<div class="flex-container co-navbar" fxLayout="row" fxLayoutAlign="center center">
   <div class="flex-item" fxFlex="4%"></div>
   <div class="flex-item" fxFlex="30%">Better Invoice</div>
-  <div class="flex-item" fxFlex="60%">Current Companies</div>
+  <div class="flex-item" fxFlex="60%" fxLayoutAlign="center center">Current Companies</div>
   <div class="flex-item" fxFlex="6%">+</div>
 </div>
-<div class="container" >
+<div class="co-box" 
+     fxLayout="row" 
+     fxLayout.xs="column"
+     fxLayoutAlign.md="left center"
+    
+     fxLayoutAlign.xs="start">
+  <div *ngFor="let company of companies" >   
+  <div class="flex-item co-box" 
+       fxFlex="350" 
+       fxFlex.xs="40%"
+       [ngClass]="setClasses(company)
+       ">{{company.name}}
+ </div>
+  </div>
+  
+</div> 
+
+
+
+
+
+
+
+
+
+<!--<div class="container" >
 <div class="row">
 <div *ngFor="let company of companies" >
 
@@ -28,4 +53,4 @@
 </div>
 
 
-</div>
+</div>-->

@@ -2,15 +2,15 @@
 * {
     box-sizing: border-box;
     font-size: 20px;
-    max-width: 700px;
+    max-width: 800px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight:300;
 }
 /* -------------------------------------------*/
 /*                NAVBAR                      */
 /* -------------------------------------------*/
-.ni-navbar {
-       max-width: 700px;
+.co-navbar {
+       
        background-color: black;
        color: white;
        height: 45px;
@@ -18,7 +18,9 @@
     .ni-navbar-right {
        padding-left: 15px;
     }
-
+.first-item {
+  margin-left: 10px !important;
+}
 
 
 
@@ -56,7 +58,7 @@ padding-top: 8px;
 
     margin-top: 15px;
     color: #f2f2f2;
-    margin-left:25px;
+    margin-left:10px;
    
 }
 
