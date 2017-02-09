@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { ClientService } from './client.service';
 import { CompanyService } from './company/company.service';
+import { InvoiceService } from './invoice/invoice.service';
 
 
 import { HomeComponent } from './home/home.component';
@@ -16,11 +17,13 @@ import { CompaniesComponent } from './company/companies.component';
 import { NewItemComponent } from './new-item/new-item.component';
 import { TabsModule } from 'ng2-bootstrap/tabs';
 import { ItemComponent } from './item/item.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home-app', pathMatch: 'full'},
   { path: 'home-app', component: HomeComponent },
   { path: 'app-new-item', component: NewItemComponent },
+  { path: 'invoice/:id', component: InvoiceComponent },
   // { path: 'client',      component: ClientComponent },
   // {
   { path: '**', component: HomeComponent }
@@ -35,6 +38,7 @@ const appRoutes: Routes = [
     CompaniesComponent,
     NewItemComponent,
     ItemComponent,
+    InvoiceComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -46,7 +50,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     ClientService,
-    CompanyService
+    CompanyService,
+    InvoiceService,
   ],
   bootstrap: [AppComponent]
 })
