@@ -1,6 +1,7 @@
 import { Company } from '../company/company';
 
-export interface Item {
+export class Item {
+   id?:number;
    company: Company;
    date: Date;
    hours: number;

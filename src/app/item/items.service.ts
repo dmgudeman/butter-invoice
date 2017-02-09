@@ -1,29 +1,35 @@
 import { OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { CompanyService } from '../company/company.service';
 import { Company } from '../company/company';
+import { Item } from './item';
+import { Items } from './items';
+
+
 @Injectable()
-
-
 export class ItemsService {
   companies:Company[];
-  co_name: string;
+  items:Item[];
+ 
+  
+  constructor(private ITEMS:Items) {
+    this.items=ITEMS.items;
 
-  constructor(private _companyService:CompanyService) {}
+  }
 
   ngOnInit () {
     
   }
-
-getCompanies(): void {
-  this._companyService.getCompanies().then(companies => this.companies = companies)
+getItems():Promise<Item[]>{
+   return Promise.resolve(this.items);
 }
 
+getItem(id:number){
+  return Promise.resolve(this.items[id]);
 }
 
-
-
-  
-
+setItem(item:Item){
+  return Promise.resolve(this.items.push(item));
+}
+}
    
    
