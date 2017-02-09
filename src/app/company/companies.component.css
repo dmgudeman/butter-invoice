@@ -1,4 +1,4 @@
-
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 * {
     box-sizing: border-box;
     font-size: 20px;
@@ -12,6 +12,7 @@
 .co-nav-main {
    padding:10px 0px;
    background-color:#34495e;
+   max-height: 45px;
    color:#f2f2f2
 }
 .co-nav-logo {
@@ -28,10 +29,10 @@
 }
 .co-nav-plus {
     display: block-inline;
-    float:right;
+
+    
     margin-right: 25px;
-    font-size:30px;
-    font-weight:700;
+    font-weight:200;
     background-color: #34495e;
     color:#f2f2f2;
 }
@@ -53,23 +54,12 @@
    
 }
 
-.co-heading {
-    height: 50px;
-    width: 80px;
-    font-size: 100%;
-    padding-left: 30px;
-    padding-top: 10px;
-    border-radius: 7px;
-    margin-bottom: 0px;
-   
-   
-}
 
 /* -------------------------------------------*/
 /*                BUTTONS                     */
 /* -------------------------------------------*/
 
-.co-button {
+/*.co-button {
     height:40px;
     width:147px;
     padding: 0px;
@@ -78,15 +68,28 @@
     margin: 0px;
     margin-top:0px;
     font-size: 80%;
+}*/
+.co-heading {
+    height: 50px;
+    width: 80px;
+    font-size: 100%;
+    padding-left: 30px;
+    padding-top: 10px;
+    border-radius: 7px;
+    margin-bottom: 0px;
 }
 
+.co-button{
+    display:inline-block;
+}
 .co-left {
+    display:inline-block;
     border-bottom-left-radius: 10px;
     margin-top: 10px;
     margin-right:2px;
 }
 .co-right {
-   float: right;
+    display:inline-block;
    border-bottom-right-radius: 10px;
    margin-top: 10px;
    margin-left:2px;

@@ -7,7 +7,8 @@ export class Item {
     // hours: number;
     // hourly: number;
     // description: string;
-    constructor(id: number,
+    constructor(
+        id: number,
         public date: Date,
         public hours: number,
         public hourly: number,

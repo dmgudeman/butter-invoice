@@ -4,9 +4,9 @@
 
      <div class="col-sm-4"><span class="co-nav-logo">Better Invoice</span></div>
      <div class="col-sm-4">Current Companies</div>
-     <div class="col-sm-4"><a [routerLink]="['/app-new-item']"  class="glyphicon glyphicon-plus co-nav-plus" aria-hidden="true"></a></div>
+     <div class="col-sm-3 co-nav-plus">+</div>
 
-</div>
+
 
 <div *ngFor="let company of companies" >
 
@@ -18,11 +18,15 @@
             <input type="button" class="little-rt-btn" value="edit">
           </span>
         </div>
-        <div>
-            <input type="button" class="co-button co-left" [ngClass]="setClasses(company)" value="Export Invoice">
-            <input type="button" class="co-button co-right" [ngClass]="setClasses(company)" value=" + Add">
+        </div>
+        <div class="row">
+            <div class="col co-button co-left" [ngClass]="setClasses(company)"><a href="#"   aria-hidden="true">Export Invoice</a></div>
+
+            <div class="col co-button co-right" [ngClass]="setClasses(company)"><a [routerLink]="['/app-new-item']"  aria-hidden="true"></a>+Add</div>
+
         </div>
     </div>
 </div>
 </div>
+
 </div>
