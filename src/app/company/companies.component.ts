@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CompanyService } from './company.service';
 import { Company } from './company';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'companies',
@@ -34,7 +35,7 @@ setClasses(company:Company) {
   let green = (company.color==='green');
   let blue = (company.color==='blue');
   let brown = (company.color==='brown');
-  
+
   console.log(company.color,red,green,blue);
   let classes={
     red: red,
@@ -48,6 +49,14 @@ setClasses(company:Company) {
 
   }
 
+ setLayout(company:Company){
+  let layout;
+   if(company.id===2){
+    return layout = "none";
+   }
+   return layout = "wrap";
+ } 
+  
 
 }
   

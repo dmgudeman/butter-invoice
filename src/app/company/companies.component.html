@@ -4,15 +4,16 @@
   <div class="flex-item" fxFlex="60%" fxLayoutAlign="center center">Current Companies</div>
   <div class="flex-item" fxFlex="6%">+</div>
 </div>
-<div class="co-box" 
+<div class="co-body" 
      fxLayout="row" 
      fxLayout.xs="column"
      fxLayoutAlign.md="left center"
-    
+     fxLayoutWrap
+
      fxLayoutAlign.xs="start">
-  <div *ngFor="let company of companies" >   
+  <div *ngFor="let company of companies"  >   
   <div class="flex-item co-box" 
-       fxFlex="350" 
+       fxFlex="350px" 
        fxFlex.xs="40%"
        [ngClass]="setClasses(company)
        ">{{company.name}}
