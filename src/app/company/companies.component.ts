@@ -16,25 +16,27 @@ export class CompaniesComponent implements OnInit {
   constructor(private companyService: CompanyService){};
 
   ngOnInit() {
-    this.companies = this.companyService.getCompaniesMainList();
+    this.companies = this.getCompanies();
     console.log("ngOnInit = " + this.companies.length);
   }
-//   getCompanies(): void {
-//   this.companyService.getCompanies().then(companies => this.companies = companies)
-// }
+  getCompanies():Company[] {
+  return this.companyService.getCompanies();
+}
   
 setClasses(company:Company) {
   let red:boolean = (company.color==='red');
   let green = (company.color==='green');
   let blue = (company.color==='blue');
   let brown = (company.color==='brown');
+  let yellow = (company.color==='yellow');
 
   console.log(company.color,red,green,blue);
   let classes={
     red: red,
     green: green,
     blue: blue,
-    brown: brown
+    brown: brown,
+    yellow: yellow
   };
   console.log("classes = " + JSON.stringify(classes));
   return classes
@@ -42,13 +44,13 @@ setClasses(company:Company) {
 
   }
 
- setLayout(company:Company){
-  let layout;
-   if(company.id===2){
-    return layout = "none";
-   }
-   return layout = "wrap";
- } 
+//  setLayout(company:Company){
+//   let layout;
+//    if(company.id===2){
+//     return layout = "none";
+//    }
+//    return layout = "wrap";
+//  } 
   
 
 }

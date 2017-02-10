@@ -1,5 +1,5 @@
 export class Company {
-   id: number;
+   id?: number;
    name: string;
    color: string;
    hourly: number;
