@@ -16,20 +16,13 @@ export class CompaniesComponent implements OnInit {
   constructor(private companyService: CompanyService){};
 
   ngOnInit() {
-    this.getCompanies();
-    console.log(this.companies);
+    this.companies = this.companyService.getCompaniesMainList();
+    console.log("ngOnInit = " + this.companies.length);
   }
-  getCompanies(): void {
-  this.companyService.getCompanies().then(companies => this.companies = companies)
-}
-  // setClasses(){
-  //   let classes = {
-  //     red: true
-  //   }
-  //   console.log("classes = " + JSON.stringify(classes));
-  //   return classes;
-  // }
-
+//   getCompanies(): void {
+//   this.companyService.getCompanies().then(companies => this.companies = companies)
+// }
+  
 setClasses(company:Company) {
   let red:boolean = (company.color==='red');
   let green = (company.color==='green');

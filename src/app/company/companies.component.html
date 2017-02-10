@@ -7,16 +7,25 @@
 <div class="co-body" 
      fxLayout="row" 
      fxLayout.xs="column"
-     fxLayoutAlign.md="left center"
+     fxLayoutAlign="center center"
      fxLayoutWrap
+     fxLayoutGap="20px"
+     fxLayoutGap.xs="5px"
 
      fxLayoutAlign.xs="start">
-  <div *ngFor="let company of companies"  >   
+  <div *ngFor="let companyRow of companies" class="outer-div">
   <div class="flex-item co-box" 
-       fxFlex="350px" 
+       fxFlex="300px" 
        fxFlex.xs="40%"
-       [ngClass]="setClasses(company)
-       ">{{company.name}}
+       [ngClass]="setClasses(companyRow[0])"
+      >{{companyRow[0].name}}
+ </div>
+  <div *ngIf="companyRow.length > 1" 
+       class="flex-item co-box" 
+       fxFlex="300px" 
+       fxFlex.xs="40%"
+       [ngClass]="setClasses(companyRow[1])"
+       >{{companyRow[1].name}}
  </div>
   </div>
   
