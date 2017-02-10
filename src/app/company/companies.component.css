@@ -15,38 +15,13 @@
        color: white;
        height: 45px;
     }
-    .ni-navbar-right {
+/*.ni-navbar-right {
        padding-left: 15px;
-    }
+    }*/
 .co-body {
     max-width: 700px;
 }
 
-
-
-/*.co-nav-main {
-padding-top: 8px;
-    background-color:#34495e;
-    color:#f2f2f2;
-    height: 45px;
-}
-.co-nav-logo {
-    /*display: block-inline;*/
-    
-    /*font-family:'IM Fell Great Primer SC', Arial, sans-serif;
-    font-size: 20px;
-  
-}
-.co-nav-title {
-    /*display: block-inline;
-}
-.co-nav-plus {
-    /*display: block-inline;
-    
-    font-weight:200;
-    background-color: #34495e;
-    color:#f2f2f2;
-}*/
 /*----------------------------------------------------*/
 /*               COMPANY BOX                          */
 /*----------------------------------------------------*/
@@ -57,22 +32,6 @@ padding-top: 8px;
     margin-right: 15px;
     color: #f2f2f2;
 }
-
-
-/* -------------------------------------------*/
-/*                BUTTONS                     */
-/* -------------------------------------------*/
-
-/*.co-button {
-    height:40px;
-    width:147px;
-    padding: 0px;
-    padding-top: 0px;
-    border: none;
-    margin: 0px;
-    margin-top:0px;
-    font-size: 80%;
-}*/
 .co-heading {
     height: 50px;
     width: 80px;
@@ -91,18 +50,14 @@ padding-top: 8px;
     height: 40px;
     width: 150px;
     margin-top:10px;
-    
    
 }
 .co-right {
     display:inline-block;
- 
     border-bottom-right-radius: 10px;
     height: 40px;
     width: 150px;
- 
     margin-top:10px;
-    
     font-weight:600;
 }
 .little-rt-btn {
@@ -116,6 +71,11 @@ padding-top: 8px;
     background-color: rgba(0, 153, 51, 0);
     font-size: 55%;
 }
+
+/*----------------------------------------------------*/
+/*               COMPANY COLORS                       */
+/*----------------------------------------------------*/
+
 .green{
      background-color: #00C853;
 }
