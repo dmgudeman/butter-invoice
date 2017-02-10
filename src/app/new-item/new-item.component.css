@@ -54,3 +54,15 @@ label {
     background-color: #fff;
     font-size: 100%;
 }
+
+.ni-submit {
+    font-size:90%;
+    box-sizing : border-box;
+    border-radius: 4px;
+  
+    background-color: black;
+    color:#f2f2f2;
+    margin: 15px;
+    max-width: 338px;
+    
+}

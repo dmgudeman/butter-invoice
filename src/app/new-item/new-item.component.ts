@@ -14,14 +14,16 @@ export class NewItemComponent implements OnInit {
    }
 
   ngOnInit() {
-    
     this.fdate = this.dateFormat(this.date, "mm/dd/yyyy");
   }
   
   updateDate(){
-
     this.fdate = this.dateFormat(this.fdate, "mm/dd/yyyy")
    
   }
-
+  canSave = true;
+  onClickCanSave() {
+    this.canSave = !this.canSave;
+    console.log(this.canSave);
+  } 
 }
