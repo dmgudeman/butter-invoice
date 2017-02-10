@@ -21,6 +21,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home-app', pathMatch: 'full'},
   { path: 'home-app', component: HomeComponent },
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     ItemComponent,
     InvoiceComponent,
     BootexComponent,
+ 
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -9,12 +9,12 @@ import { TabsModule } from 'ng2-bootstrap/tabs';
 export class NewItemComponent implements OnInit {
   date = new Date();
   dateFormat = require('dateformat');
-  fdate:Date;
+  fdate:Date = new Date();
   constructor() {
    }
 
   ngOnInit() {
-    this.fdate = this.dateFormat(this.date, "mm/dd/yyyy");
+     this.updateDate();  
   }
   
   updateDate(){
