@@ -90,6 +90,9 @@
 .yellow {
     background-color: #f1c40f;
 }
+.purple {
+    background-color: #9b59b6;
+}
 .green.co-button{
      background-color: #00d95a;
     
@@ -107,5 +110,8 @@
 }
 .yellow.co-button {
     background-color: #e2b70d;
+}
+.purple.co-button {
+    background-color: #a265bb;
 }
 

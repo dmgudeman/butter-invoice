@@ -29,6 +29,7 @@ setClasses(company:Company) {
   let blue = (company.color==='blue');
   let brown = (company.color==='brown');
   let yellow = (company.color==='yellow');
+  let purple = (company.color==='purple');
 
   console.log(company.color,red,green,blue);
   let classes={
@@ -36,7 +37,8 @@ setClasses(company:Company) {
     green: green,
     blue: blue,
     brown: brown,
-    yellow: yellow
+    yellow: yellow,
+    purple: purple
   };
   console.log("classes = " + JSON.stringify(classes));
   return classes
