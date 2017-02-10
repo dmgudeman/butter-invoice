@@ -24,7 +24,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home-app', pathMatch: 'full'},
   { path: 'home-app', component: HomeComponent },
-  { path: 'app-new-item', component: NewItemComponent },
+  { path: 'new-item', component: NewItemComponent },
   { path: 'invoice/:id', component: InvoiceComponent },
   // { path: 'client',      component: ClientComponent },
   // {
