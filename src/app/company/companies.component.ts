@@ -43,16 +43,6 @@ setClasses(company:Company) {
   
 
   }
-
-//  setLayout(company:Company){
-//   let layout;
-//    if(company.id===2){
-//     return layout = "none";
-//    }
-//    return layout = "wrap";
-//  } 
-  
-
 }
   
 

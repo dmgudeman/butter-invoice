@@ -12,34 +12,40 @@
      fxLayoutWrap
      fxLayoutGap.xs="5px"
      >
-  
   <div *ngFor="let company of companies" class="outer-div">
   <div class="flex-item co-box" 
        fxFlex="300px"
        fxFlex.xs="40%"
        [ngClass]="setClasses(company )"
-      ><span fxLayoutAlign="space-around" class="co-heading" >{{company.name}}</span>
-      <div fxLayout="row"  >
-            <div class="col co-button co-left"   fxLayoutAlign="center center" [ngClass]="setClasses(company)"><a href="#"   class="co-button" aria-hidden="true">Export Invoice</a></div>
-
-            <div class="col co-button co-right" fxLayoutAlign="center center"  [ngClass]="setClasses(company)"><a class="co-button" [routerLink]="['/new-item']"  aria-hidden="true">+Add</a></div>
-
+       >
+           <span fxLayoutAlign="space-around" 
+                 class="co-heading" >{{company.name}}</span>
+      <div fxLayout="row">
+            <div class="col co-button co-left"   
+                 fxLayoutAlign="center center" 
+                 [ngClass]="setClasses(company)"
+                 >
+                 <a href="#"   
+                    class="co-button" 
+                    aria-hidden="true"
+                    >
+                    Export Invoice
+                </a>
+           </div>
+           <div class="col co-button co-right" 
+                fxLayoutAlign="center center"  
+                [ngClass]="setClasses(company)"
+                >
+                <a class="co-button" 
+                   [routerLink]="['/new-item']"  
+                   aria-hidden="true"
+                   >
+                   +Add
+                </a>
+           </div>
         </div>
- </div>
-  <!--<div *ngIf="companyRow.length > 1" 
-       class="flex-item co-box" 
-       fxFlex="300px"
-       fxFlex.xs="40%"
-       [ngClass]="setClasses(companyRow[1])"
-      ><span fxLayoutAlign="space-around" class="co-heading" >{{companyRow[1].name}}</span>
-      <div fxLayout="row"  >
-            <div class="col co-button co-left"   fxLayoutAlign="center center" [ngClass]="setClasses(companyRow[1])"><a href="#"   class="co-button" aria-hidden="true">Export Invoice</a></div>
-
-            <div class="col co-button co-right" fxLayoutAlign="center center"  [ngClass]="setClasses(companyRow[1])"><a class="co-button" [routerLink]="['/new-item']"  aria-hidden="true">+Add</a></div>
-
- </div>-->
+     </div>
   </div>
-  
 </div> 
 
 
@@ -50,28 +56,3 @@
 
 
 
-<!--<div class="container" >
-<div class="row">
-<div *ngFor="let company of companies" >
-
-    <div class="col-sm-12 col-med-6 co-box" [ngClass]="setClasses(company)">
-        <div >
-        <div class="co-heading" >
-            {{company.name}}
-            <span class="short-line">
-            <input type="button" class="little-rt-btn" value="edit">
-          </span>
-        </div>
-        </div>
-        <div class="row ">
-            <div class="col co-button co-left" [ngClass]="setClasses(company)"><a href="#"   class="co-button" aria-hidden="true">Export Invoice</a></div>
-
-            <div class="col co-button co-right" [ngClass]="setClasses(company)"><a class="co-button" [routerLink]="['/app-new-item']"  aria-hidden="true">+Add</a></div>
-
-        </div>
-    </div>
-</div>
-</div>
-
-
-</div>-->
