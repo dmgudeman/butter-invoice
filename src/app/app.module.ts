@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
@@ -22,15 +22,7 @@ import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: '/home-app', pathMatch: 'full'},
-  { path: 'home-app', component: HomeComponent },
-  { path: 'new-item', component: NewItemComponent },
-  { path: 'invoice/:id', component: InvoiceComponent },
-  // { path: 'client',      component: ClientComponent },
-  // {
-  { path: '**', component: HomeComponent }
-];
+
 
 
 @NgModule({
@@ -43,16 +35,14 @@ const appRoutes: Routes = [
     ItemComponent,
     InvoiceComponent,
     BootexComponent,
- 
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     BrowserModule,
+    FlexLayoutModule.forRoot(),
     FormsModule,
     HttpModule,
-    TabsModule.forRoot(),
-    FlexLayoutModule.forRoot()
-   
+    TabsModule.forRoot()
   ],
   providers: [
     ClientService,
