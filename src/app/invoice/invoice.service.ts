@@ -1,37 +1,89 @@
 import { Invoice } from './invoice';
 import { Item } from '../item/item';
 export class InvoiceService {
-    getInvoicesByUserId(userId: number): Promise<Invoice[]> {
-        return Promise.resolve([
-            new Invoice(1000, 'First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+    invoices: Invoice[];
+   
+    ivTitle: string;
+    ivFromDate: string;
+    ivToDate: string;
+    ivDiscountPercent: number;
+    ivDiscountAmount: number;
+    ivDescription: string;
+    ivItems: Item[];
+     id?: number;
+    ivUid?: number;
+    ivCoId?: number;
+
+    constructor () {
+        this.invoices = [new Invoice('First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!",[
                 new Item(505, new Date(), 5, 20, 'Baked and Iced cake'),
-            ]),
-            new Invoice(1001, 'Second Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+            ],1000 ,1,1),
+            new Invoice('Second Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(500, new Date(), 25, 18, 'Designed new company logo'),
                 new Item(501, new Date(), 15, 20, 'Translated 4 documents'),
-            ]),
-            new Invoice(1002, 'Third Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+            ],1001, 1, 1),
+            new Invoice( 'Third Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(502, new Date(), 50, 18, 'Further Developed 2 ideas'),
                 new Item(503, new Date(), 70, 18, 'Did face-painting at party'),
                 new Item(504, new Date(), 30, 18, 'Submitted 10 initial ideas'),
-            ]),
+            ],1002,1,1)
+        ]
+    }
+    
+    getInvoicesByUserId(userId: number): Promise<Invoice[]> {
+        return Promise.resolve([
+            new Invoice('First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!",[
+                new Item(505, new Date(), 5, 20, 'Baked and Iced cake'),
+            ],1000, 1, 1),
+            new Invoice('Second Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+                new Item(500, new Date(), 25, 18, 'Designed new company logo'),
+                new Item(501, new Date(), 15, 20, 'Translated 4 documents'),
+            ],1001, 1,1),
+            new Invoice( 'Third Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+                new Item(502, new Date(), 50, 18, 'Further Developed 2 ideas'),
+                new Item(503, new Date(), 70, 18, 'Did face-painting at party'),
+                new Item(504, new Date(), 30, 18, 'Submitted 10 initial ideas'),
+            ],1002,1,1),
         ]);
     };
     getInvoiceById(invoiceId: number): Promise<Invoice> {
         const foundInvoice = [
-            new Invoice(1000, 'First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+            new Invoice('First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(505, new Date(), 5, 20, 'Baked and Iced cake'),
-            ]),
-            new Invoice(1001, 'Second Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+            ],1000, 1,1),
+            new Invoice( 'Second Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(500, new Date(), 25, 18, 'Designed new company logo'),
                 new Item(501, new Date(), 15, 20, 'Translated 4 documents'),
-            ]),
-            new Invoice(1002, 'Third Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
+            ],1001,1,1),
+            new Invoice('Third Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(502, new Date(), 50, 18, 'Further Developed 2 ideas'),
                 new Item(503, new Date(), 70, 18, 'Did face-painting at party'),
                 new Item(504, new Date(), 30, 18, 'Submitted 10 initial ideas'),
-            ]),
+            ],1002, 1,1),
         ].find(invoice => invoice.id === invoiceId);
         return Promise.resolve(foundInvoice);
     };
+    makeInvoice(id?: number, ivUid?:number, ivCoId?:number ) 
+                {
+        let new_ivTitle = "new invoice";
+        let new_ivFromDate ="2/17/2017";
+        let new_ivToDate ="3/17/2017";
+        let new_ivDiscountPercent = 25;
+        let new_ivDiscountAmount = 0;
+        let new_ivDescription="this is a new invoice"
+        let new_ivItems = null;
+        let new_id = 5000;
+        
+        this.ivTitle = new_ivTitle;
+        this.ivFromDate= new_ivFromDate;
+        this.ivToDate=new_ivToDate;
+        this.ivDiscountPercent=new_ivDiscountPercent;
+        this.ivDiscountAmount=new_ivDiscountAmount;
+        this.ivDescription=new_ivDescription;
+        this.ivItems = new_ivItems;
+        this.id  ? id:  new_id;
+        this.ivUid ? ivUid : 1;
+        this.ivCoId ? ivCoId: 2;
+    }
+
 }

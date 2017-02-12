@@ -1,6 +1,6 @@
 import { Item } from '../item/item';
 export class Invoice  {
-    id?: number;
+    
     ivTitle: string;
     ivFromDate: string;
     ivToDate: string;
@@ -8,12 +8,14 @@ export class Invoice  {
     ivDiscountAmount: number;
     ivDescription: string;
     ivItems: Item[];
-    constructor(id: number, ivTitle: string, ivFromDate: string, ivToDate: string,
+    id?: number;
+    ivCoId?:number;
+    ivUid?: number;
+
+    constructor(ivTitle: string, ivFromDate: string,                   ivToDate: string,
                 ivDiscountPercent:number, ivDiscountAmount:number, ivDescription: string, 
-                ivItems: Item[]) {
-        if (id) {
-            this.id = id;
-        }
+                ivItems: Item[], id?:number, ivCoId?:number, ivUid?: number, ) {
+        
         this.ivTitle = ivTitle;
         this.ivFromDate= ivFromDate;
         this.ivToDate=ivToDate;
@@ -21,5 +23,14 @@ export class Invoice  {
         this.ivDiscountAmount;
         this.ivDescription;
         this.ivItems = ivItems;
+        if(id){
+            this.id = id
+        };
+        if(ivCoId){
+            this.ivCoId= ivCoId;
+        };
+        if (ivUid) {
+            this.id = ivUid
+        };
     }
 }
