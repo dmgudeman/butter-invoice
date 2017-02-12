@@ -46,18 +46,19 @@ export class InvoiceComponent implements OnInit {
   } 
 
   getInvoice(){
-   return this.route.params
+    this.route.params
     .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
     .subscribe( invoicex => {this.invoice = invoicex;
                             console.log("invoicex " + JSON.stringify(invoicex));
     console.log ("JSON.stringify(this.invoice) = "+JSON.stringify(this.invoice));
-    this.printInvoice();
+    
+    
   });
-   
+   this.printInvoice("getInvoice ");
 }
 
-printInvoice(){
-  console.log("printInvoice " + JSON.stringify(this.invoice));
+printInvoice(method){
+  console.log("nethod " + JSON.stringify(this.invoice));
 }
 setClasses() {
     // let red: boolean = (company.color === 'red');
