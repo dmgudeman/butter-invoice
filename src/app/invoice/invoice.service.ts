@@ -1,9 +1,8 @@
 import { Invoice } from './invoice';
 import { Item } from '../item/item';
 export class InvoiceService {
-   
+    id:number; 
     invoice: Invoice;
-    
     invoices = [new Invoice('First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!",[
                 new Item(505, new Date(), 5, 20, 'Baked and Iced cake'),
             ] ,1,1,1000),
@@ -36,6 +35,7 @@ export class InvoiceService {
        return Promise.resolve(foundInvoice);
     };
     makeInvoice( uId:number, coId:number ){ 
+        
 
         let new_ivTitle = "new invoice";
         let new_ivFromDate ="2/17/2017";
@@ -58,10 +58,11 @@ export class InvoiceService {
         new_ivDescription,
         new_ivItems,
         new_ivCoId,
-        new_ivUid
+        new_ivUid,
+       
        
        );
-           console.log("this.invoices.length = " +this.invoices.length)
+          console.log("this.invoices.length = " +this.invoices.length)
          this.addInvoice(this.invoice);
           console.log("this.invoices.length = " +this.invoices.length)
          return this.invoice;
@@ -73,4 +74,5 @@ export class InvoiceService {
       getInvoices(){
           return this.invoices;
       }     
+      
 }

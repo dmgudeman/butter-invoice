@@ -50,8 +50,8 @@ export class InvoiceComponent implements OnInit {
     .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
     .subscribe( invoicex => {this.invoice = invoicex;
                             console.log("invoicex " + JSON.stringify(invoicex));
-    console.log ("JSON.stringify(this.invoice) = "+JSON.stringify(this.invoice));
-    
+    console.log ("JSON.stringify(this.invoice)= "+JSON.stringify(this.invoice));
+    return this.invoice;
     
   });
    this.printInvoice("getInvoice ");
