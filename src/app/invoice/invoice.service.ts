@@ -41,7 +41,7 @@ export class InvoiceService {
         let new_ivFromDate ="2/17/2017";
         let new_ivToDate ="3/17/2017";
         let new_ivDiscountPercent = 25;
-        let new_ivDiscountAmount = 0;
+        let new_ivDiscountAmount = 15;
         let new_ivDescription="this is a new invoice"
         let new_ivItems = null;
         let new_ivCoId = coId ;

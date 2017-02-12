@@ -10,12 +10,15 @@ import { Invoice } from './invoice';
   styleUrls: ['./invoice.component.css']
 })
 export class InvoiceComponent implements OnInit {
-  ivTitle: string;
-  toDate = new Date();
-  fromDate:Date = new Date();
-  discount:number=0;
+  title: string;
+  fromDate:string;
+  toDate:string;
+  discountAmount:number;
+  description:string;
+
   dateFormat = require('dateformat'); 
   invoice: Invoice; 
+  
  
   
   constructor(private _invoiceService: InvoiceService,
@@ -36,8 +39,8 @@ export class InvoiceComponent implements OnInit {
   updateToDate(){
     this.toDate = this.dateFormat(this.toDate, "mm/dd/yyyy");
   }
-  updateDiscount(newDiscount:number){
-    this.discount = newDiscount;
+  updateDiscountAmount(newDiscountAmount:number){
+    this.discountAmount = newDiscountAmount;
   }
   canSave = true;
   onClickCanSave() {
@@ -54,7 +57,11 @@ export class InvoiceComponent implements OnInit {
                             console.log("invoicex " + JSON.stringify(invoicex));
     console.log ("JSON.stringify(this.invoice)= "+JSON.stringify(this.invoice));
 
-    this.ivTitle = this.invoice.ivTitle;
+    this.title = this.invoice.ivTitle;
+    this.fromDate = this.invoice.ivFromDate;
+    this.toDate = this.invoice.ivToDate;
+    this.discountAmount = this.invoice.ivDiscountAmount;
+    this.description = this.invoice.ivDescription;
     return this.invoice;
     
   });
@@ -63,7 +70,7 @@ export class InvoiceComponent implements OnInit {
 }
 
 printInvoice(method){
-  console.log("nethod " + JSON.stringify(this.invoice));
+  console.log("method " + JSON.stringify(this.invoice));
 
 
 }
