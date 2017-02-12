@@ -85,15 +85,16 @@ export class InvoiceService {
         new_ivDiscountAmount,
         new_ivDescription,
         new_ivItems,
-         new_ivCoId,
+        new_ivCoId,
         new_ivUid
        
        );
 
-      console.log("this.invoice in invoiceService = " + JSON.stringify(this.invoice));
-         
+         this.addInvoice(this.invoice);
          return this.invoice;
        }
 
-    
+      addInvoice(invoice:Invoice){
+        this.invoices.push(invoice);
+      }
 }
