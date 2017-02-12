@@ -51,6 +51,14 @@ export class CompaniesComponent implements OnInit {
     this.router.navigate(['invoice', {uId: uId, coId: coId, coName: coName, coHourly: coHourly, }])
 
   }
+
+  goToNewItem(company:Company){
+    let hourly = company.hourly;
+    let companyName = company.name;
+    let uId =4
+    console.log(hourly);
+    this.router.navigate(['/new-item', {hourly: hourly, companyName:companyName, uId:uId }]);
+  }
 }
 
 

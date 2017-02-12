@@ -33,7 +33,7 @@
                 [ngClass]="setClasses(company)"
                 >
                 <a class="co-button" 
-                   [routerLink]="['/new-item']"  
+                   (click)="goToNewItem(company)"  
                    aria-hidden="true"
                    >
                    +Add

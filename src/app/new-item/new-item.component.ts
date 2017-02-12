@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TabsModule } from 'ng2-bootstrap/tabs';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+
 
 @Component({
   selector: 'app-new-item',
@@ -10,11 +13,25 @@ export class NewItemComponent implements OnInit {
   date = new Date();
   dateFormat = require('dateformat');
   fdate:Date = new Date();
-  constructor() {
+  getHourly: Observable<number>
+  hourly: number;
+  companyName:string;
+  uId:number;
+  constructor(private route:ActivatedRoute) {
    }
 
   ngOnInit() {
-     this.updateDate();  
+     this.route.params.subscribe(params =>{
+     this.hourly=params['hourly'];
+     this.companyName=params['companyName'];
+     this.uId = params['uId'];
+
+     console.log ("params" + params['hourly'])
+     console.log ("this.hourly " + this.hourly);
+    //  return this.hourly;
+   })
+   
+    console.log("this.hourly" + this.hourly);
   }
   
   updateDate(){

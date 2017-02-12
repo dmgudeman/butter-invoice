@@ -30,16 +30,13 @@
 
                             <div class="form-group col-md-6">
                                 <label for="date">Date</label>
-                                <input [(ngModel)]=fdate (change)="updateDate()" name="date" #name="ngModel" id="date" type="text" class="form-control" required minlength="3">
+                                <input [(ngModel)]=fdate (change)="updateDate()" name="date" #name="ngModel" id="date" type="text" class="form-control" >
 
                             </div>
 
                             <div class="form-group col-md-6">
-
                                 <label for="hours">Hours</label>
-                                <input ngModel name="hours" #name="ngModel" id="hours" type="text" class="form-control" required minlength="3" placeholder="0">
-
-
+                                <input ngModel name="hours" #name="ngModel" id="hours" type="text" class="form-control"  placeholder="0">
                             </div>
                         </div>
                     </div>
@@ -59,6 +56,7 @@
                            Submit
                        </button>
                     </div>
+                    {{"hourly: " + hourly}}<br>{{" companyName: " + companyName}}<br> {{" user Id: " + uId}}
                 </form>
             </div>
         </div>
