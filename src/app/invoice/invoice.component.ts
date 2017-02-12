@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import { InvoiceService } from './invoice.service';
+import { Invoice } from './invoice';
 
 @Component({
   selector: 'invoice',
@@ -13,17 +14,18 @@ export class InvoiceComponent implements OnInit {
   toDate = new Date();
   fromDate:Date = new Date();
   discount:number=0;
-  dateFormat = require('dateformat');  
+  dateFormat = require('dateformat'); 
+  invoice: Invoice; 
+ 
   
   constructor(private _invoiceService: InvoiceService,
     private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
-    // this.route.params
-    // .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
-    // .subscribe(invoice => this.title = invoice.ivTitle);
-
+    this.getInvoice();
+    console.log ("OnInit JSON.stringify(this.invoice) = "+JSON.stringify(this.invoice));
+   
      this.updateFromDate(); 
      this.updateToDate(); 
   }
@@ -42,4 +44,40 @@ export class InvoiceComponent implements OnInit {
     this.canSave = !this.canSave;
     console.log(this.canSave);
   } 
+
+  getInvoice(){
+    this.invoice= this.route.params
+    .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
+    .subscribe( invoicex => {this.invoice = invoicex;
+                            console.log("invoicex " + JSON.stringify(invoicex));
+    console.log ("JSON.stringify(this.invoice)= "+JSON.stringify(this.invoice));
+    return this.invoice;
+    
+  });
+   this.printInvoice("getInvoice ");
+}
+
+printInvoice(method){
+  console.log("nethod " + JSON.stringify(this.invoice));
+}
+setClasses() {
+    // let red: boolean = (company.color === 'red');
+    // let green = (company.color === 'green');
+    // let blue = (company.color === 'blue');
+    // let brown = (company.color === 'brown');
+    // let yellow = (company.color === 'yellow');
+    // let purple = (company.color === 'purple');
+
+    // let classes = {
+    //   red: red,
+    //   green: green,
+    //   blue: blue,
+    //   brown: brown,
+    //   yellow: yellow,
+    //   purple: purple
+    // };
+    // return classes
+   console.log("this.invoice.ivTitle"  + this.invoice.ivTitle)
+}
+  
 }
