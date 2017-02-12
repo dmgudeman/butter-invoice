@@ -52,7 +52,7 @@ export class CompaniesComponent implements OnInit {
     let uId = 1;
     let coId = company.id;
     this.invoice = this._invoiceService.makeInvoice(uId,coId);
-      console.log( JSON.stringify(this.invoice))
+      console.log("company.component.goToInvoice " + JSON.stringify(this.invoice))
      this.router.navigate(['/invoice', this.invoice.id ]);
 
   }

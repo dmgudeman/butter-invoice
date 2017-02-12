@@ -69,9 +69,9 @@ export class InvoiceService {
         // ].find(invoice => invoice.id === invoiceId);
         // return Promise.resolve(foundInvoice);
          let foundInvoice = this.getInvoices().find(item =>(item.id === invoiceId));
-         console.log("invoiceId = " + invoiceId);
-         console.log("this.invoices.length = " +this.invoices.length)
-          console.log ("JSON.stringify(foundInvoice) = "+JSON.stringify(foundInvoice));
+         console.log("getInvoiceById invoiceId = " + invoiceId);
+         console.log("getInvoiceById this.invoices.length = " +this.invoices.length)
+          console.log ("getInvoiceById JSON.stringify(foundInvoice) = "+JSON.stringify(foundInvoice));
        return Promise.resolve(foundInvoice);
     };
     makeInvoice( uId:number, coId:number ){ 
@@ -84,9 +84,9 @@ export class InvoiceService {
         let new_ivDescription="this is a new invoice"
         let new_ivItems = null;
         let new_ivCoId = coId ;
-         console.log("new_ivCoId = "+ new_ivCoId);
+         console.log("makInvoice.new_ivCoId = "+ new_ivCoId);
          let new_ivUid = uId ;
-        console.log("new_ivUid = "+ new_ivUid);
+        console.log("makeInvoice.new_ivUid = "+ new_ivUid);
        
        this.invoice = new Invoice(
         new_ivTitle,
