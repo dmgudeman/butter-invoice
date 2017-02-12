@@ -45,12 +45,12 @@
                                 <div class="input-group">
                                   <input [(ngModel)]=discount 
                                        (change)="updateDiscount()" 
-                                       name="discount" 
+                                       name="discount"
                                        #name="ngModel" 
                                        id="discount" 
                                        type="text" 
                                        class="form-control" 
-                                  >
+                                  > 
                                      <span class="input-group-addon iv-group-addon" >%</span>
                                   <span class="input-group-addon iv-group-addon" >$</span>
                                 </div>
@@ -65,10 +65,12 @@
                     </div>
                     <div>
                        <button class="col-xs-12 col-md-4 iv-submit"
-                           (click)="onClickCanSave()">
+                           (click)="setClasses()"
+                           >
                            Submit
                        </button>
                     </div>
+                    {{ivTitle}}
                 </form>
             </div>
         </div>

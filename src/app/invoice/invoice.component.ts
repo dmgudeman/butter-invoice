@@ -10,7 +10,7 @@ import { Invoice } from './invoice';
   styleUrls: ['./invoice.component.css']
 })
 export class InvoiceComponent implements OnInit {
-  title: string;
+  ivTitle: string;
   toDate = new Date();
   fromDate:Date = new Date();
   discount:number=0;
@@ -46,19 +46,26 @@ export class InvoiceComponent implements OnInit {
   } 
 
   getInvoice(){
-    this.invoice= this.route.params
+
+    this.route.params
+
     .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
     .subscribe( invoicex => {this.invoice = invoicex;
                             console.log("invoicex " + JSON.stringify(invoicex));
     console.log ("JSON.stringify(this.invoice)= "+JSON.stringify(this.invoice));
+
+    this.ivTitle = this.invoice.ivTitle;
     return this.invoice;
     
   });
-   this.printInvoice("getInvoice ");
+  
+
 }
 
 printInvoice(method){
   console.log("nethod " + JSON.stringify(this.invoice));
+
+
 }
 setClasses() {
     // let red: boolean = (company.color === 'red');
@@ -77,7 +84,21 @@ setClasses() {
     //   purple: purple
     // };
     // return classes
-   console.log("this.invoice.ivTitle"  + this.invoice.ivTitle)
+  this.printInvoice(" in submitted ");
+  console.log("this.invoice.ivTitle " +this.invoice.ivTitle);
 }
   
 }
+// ngOnInit() {
+//      this.route.params.subscribe(params =>{
+//      this.hourly=params['hourly'];
+//      this.companyName=params['companyName'];
+//      this.uId = params['uId'];
+
+//      console.log ("params" + params['hourly'])
+//      console.log ("this.hourly " + this.hourly);
+//     //  return this.hourly;
+//    })
+   
+//     console.log("this.hourly" + this.hourly);
+//   }
