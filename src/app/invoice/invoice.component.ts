@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import { InvoiceService } from './invoice.service';
+import { Invoice } from './invoice';
 
 @Component({
   selector: 'invoice',
@@ -13,17 +14,15 @@ export class InvoiceComponent implements OnInit {
   toDate = new Date();
   fromDate:Date = new Date();
   discount:number=0;
-  dateFormat = require('dateformat');  
+  dateFormat = require('dateformat'); 
+  invoice: Invoice; 
   
   constructor(private _invoiceService: InvoiceService,
     private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
-    // this.route.params
-    // .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
-    // .subscribe(invoice => this.title = invoice.ivTitle);
-
+    
      this.updateFromDate(); 
      this.updateToDate(); 
   }
@@ -42,4 +41,11 @@ export class InvoiceComponent implements OnInit {
     this.canSave = !this.canSave;
     console.log(this.canSave);
   } 
+
+  getInvoice(){
+    this.route.params
+    .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
+    .subscribe( invoice => this.invoice = invoice);
+    console.log ("JSON.stringify(this.invoice) = "+JSON.stringify(this.invoice));
+  }
 }
