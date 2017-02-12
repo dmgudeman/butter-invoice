@@ -2,7 +2,7 @@ import { Invoice } from './invoice';
 import { Item } from '../item/item';
 export class InvoiceService {
     invoices: Invoice[];
-   
+    invoice: Invoice;
     ivTitle: string;
     ivFromDate: string;
     ivToDate: string;
@@ -10,9 +10,9 @@ export class InvoiceService {
     ivDiscountAmount: number;
     ivDescription: string;
     ivItems: Item[];
-     id?: number;
-    ivUid?: number;
-    ivCoId?: number;
+    id: number;
+    ivUid: number;
+    ivCoId: number;
 
     constructor () {
         this.invoices = [new Invoice('First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!",[
@@ -63,7 +63,7 @@ export class InvoiceService {
         ].find(invoice => invoice.id === invoiceId);
         return Promise.resolve(foundInvoice);
     };
-    makeInvoice(id?: number, ivUid?:number, ivCoId?:number ) 
+    makeInvoice( ivUid?:number, ivCoId?:number ) 
                 {
         let new_ivTitle = "new invoice";
         let new_ivFromDate ="2/17/2017";
@@ -72,18 +72,24 @@ export class InvoiceService {
         let new_ivDiscountAmount = 0;
         let new_ivDescription="this is a new invoice"
         let new_ivItems = null;
-        let new_id = 5000;
-        
-        this.ivTitle = new_ivTitle;
-        this.ivFromDate= new_ivFromDate;
-        this.ivToDate=new_ivToDate;
-        this.ivDiscountPercent=new_ivDiscountPercent;
-        this.ivDiscountAmount=new_ivDiscountAmount;
-        this.ivDescription=new_ivDescription;
-        this.ivItems = new_ivItems;
-        this.id  ? id:  new_id;
-        this.ivUid ? ivUid : 1;
-        this.ivCoId ? ivCoId: 2;
-    }
+       
+        this.invoice.ivTitle = new_ivTitle;
+        this.invoice.ivFromDate= new_ivFromDate;
+        this.invoice.ivToDate=new_ivToDate;
+        this.invoice.ivDiscountPercent=new_ivDiscountPercent;
+        this.invoice.ivDiscountAmount=new_ivDiscountAmount;
+        this.invoice.ivDescription=new_ivDescription;
+        this.invoice.ivItems = new_ivItems;
+        this.invoice.id = this.makeInvoiceId()
+        this.invoice.ivUid ? ivUid : 1;
+        this.invoice.ivCoId ? ivCoId: 2;
 
+         return this.invoice;
+       }
+
+    makeInvoiceId(){
+        let id:number;
+        id = Math.floor(Math.random() * 10000);
+        return id;
+    }
 }

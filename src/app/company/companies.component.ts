@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CompanyService } from './company.service';
 import { Company } from './company';
+import { InvoiceService } from '../invoice/invoice.service';
+import { Invoice } from '../invoice/invoice';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -12,16 +14,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 export class CompaniesComponent implements OnInit {
   class: any;
   companies: Company[];
+  invoice: Invoice;
 
-
-  constructor(private companyService: CompanyService,
+  constructor(
+              private _companyService: CompanyService,
+              private _invoiceService: InvoiceService,
               private router:Router) { };
 
   ngOnInit() {
     this.companies = this.getCompanies();
   }
   getCompanies(): Company[] {
-    return this.companyService.getCompanies();
+    return this._companyService.getCompanies();
   }
 
   setClasses(company: Company) {
@@ -46,9 +50,9 @@ export class CompaniesComponent implements OnInit {
   goToInvoice(company:Company) {
     let uId = 1;
     let coId = company.id;
-    let coName = company.name;
-    let coHourly = company.hourly;
-    this.router.navigate(['invoice', {uId: uId, coId: coId, coName: coName, coHourly: coHourly, }])
+    let invoice:Invoice;
+    this.invoice = this._invoiceService.makeInvoice(uId,coId);
+    this.router.navigate(['invoice', invoice.id ]);
 
   }
 }

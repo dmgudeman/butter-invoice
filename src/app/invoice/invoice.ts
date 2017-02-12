@@ -14,7 +14,7 @@ export class Invoice  {
 
     constructor(ivTitle: string, ivFromDate: string,                   ivToDate: string,
                 ivDiscountPercent:number, ivDiscountAmount:number, ivDescription: string, 
-                ivItems: Item[], id?:number, ivCoId?:number, ivUid?: number, ) {
+                ivItems: Item[], id?:number, ivCoId?:number, ivUid?: number ) {
         
         this.ivTitle = ivTitle;
         this.ivFromDate= ivFromDate;
