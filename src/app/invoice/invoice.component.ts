@@ -20,9 +20,9 @@ export class InvoiceComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.route.params
-    .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
-    .subscribe(invoice => this.title = invoice.ivTitle);
+    // this.route.params
+    // .switchMap((params: Params) => this._invoiceService.getInvoiceById(+params['id']))
+    // .subscribe(invoice => this.title = invoice.ivTitle);
 
      this.updateFromDate(); 
      this.updateToDate(); 

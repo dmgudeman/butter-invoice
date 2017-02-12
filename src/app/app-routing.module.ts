@@ -13,6 +13,7 @@ const appRoutes: Routes = [
   { path: 'home-app', component: HomeComponent },
   { path: 'new-item', component: NewItemComponent },
   { path: 'invoice/:id', component: InvoiceComponent },
+  { path: 'invoice', component: InvoiceComponent },
   // { path: 'client',      component: ClientComponent },
   // {
   { path: '**', component: HomeComponent }

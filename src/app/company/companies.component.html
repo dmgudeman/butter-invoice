@@ -23,14 +23,10 @@
       <div fxLayout="row">
             <div class="col co-button co-left"   
                  fxLayoutAlign="center center" 
+                 (click)="goToInvoice(company)"
                  [ngClass]="setClasses(company)"
                  >
-                 <a href="#"   
-                    class="co-button" 
-                    aria-hidden="true"
-                    >
                     Export Invoice
-                </a>
            </div>
            <div class="col co-button co-right" 
                 fxLayoutAlign="center center"  
