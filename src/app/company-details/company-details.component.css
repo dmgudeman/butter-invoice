@@ -26,7 +26,27 @@
 /*-----------------------------------------------------*/
 /*               CO-DETAILS INPUTS                       */
 /*-----------------------------------------------------*/
+input[type=radio]{
+   display:none;
+   /*margin: 10px;*/
+}
+/*input[type=radio] + label*/
+.cd-button {
+    /*display:inline-block;*/
+    margin-right:10px;
+    padding:15px;
+    border-radius:35px;
+    color: white;
+    border: transparent 0px;;
+    width:35px;
+    height:35px;
 
+}
+input[type=radio]:checked + label { 
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
 label {
    font-size: 75%;
 }
@@ -35,8 +55,31 @@ label {
     
   font-size: 100%;
 }
+.cd-radio {
+   border-radius:200px;
+   margin: 5px;
+   height: 30px;
+   width: 30px;
+}
 
-
+.brown{
+    background-color: #8D6E63;
+}
+.blue{
+    background-color: #3498db;
+}
+.green{
+    background-color: #00C853;
+}
+.yellow {
+    background-color: #f1c40f;
+}
+.red{
+    background-color: #e74c3c;
+}
+.purple {
+    background-color: #9b59b6;
+}
 
 /*-----------------------------------------------------*/
 /*               CO-DETAILS NAVBAR                     */

@@ -76,26 +76,25 @@
 /*               COMPANY COLORS                       */
 /*----------------------------------------------------*/
 
-.green{
-     background-color: #00C853;
-}
- .red{
-     background-color: #e74c3c;
-}
 .brown{
-    background-color:#8D6E63;
+    background-color: #8D6E63;
 }
-
 .blue{
-     background-color: #3498db;
+    background-color: #3498db;
 }
-
+.green{
+    background-color: #00C853;
+}
 .yellow {
     background-color: #f1c40f;
+}
+.red{
+    background-color: #e74c3c;
 }
 .purple {
     background-color: #9b59b6;
 }
+
 .green.co-button{
      background-color: #00d95a;
     

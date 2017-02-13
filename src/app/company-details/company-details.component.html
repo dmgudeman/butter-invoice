@@ -1,6 +1,3 @@
-<p>
-  company-details works!
-</p>
 <!-- NAVIGATION -->
 <div class="container-fluid">
     <div class="row">
@@ -20,13 +17,31 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group col-md-6">
+                             
                                 <label for="businessName">Business Name</label>
                                 <input [(ngModel)]="businessName"  name="businessName" #name="ngModel" id="businessName" type="text" class="form-control" >
                             </div>
-                            <div class="form-group col-md-6">
+                          
+                              <div class="form-group col-md-6">
                                 <label for="colorTag">Color tag</label>
-                                <input ngModel name="colorTag" #name="ngModel" id="colorTag" type="text" class="form-control"  placeholder="0">
-                            </div>
+                                <div id="colorTag">
+                                <input type="radio" id="tag1" name="colorTag" value="brown" ngModel  #name="ngModel"  class="form-control" >
+                                <label class=" cd-button brown" for="tag1"></label>
+                                <input type="radio" id="tag2" name="colorTag" value="blue" ngModel  #name="ngModel"  class="form-control" >
+                                <label class=" cd-button blue" for="tag2"></label>
+                                <input type="radio" id="tag3" name="colorTag" value="green" ngModel  #name="ngModel"  class="form-control" >
+                                <label class=" cd-button green" for="tag3"></label>
+                                <input type="radio" id="tag4" name="colorTag" value="yellow" ngModel  #name="ngModel"  class="form-control" >
+                                <label class=" cd-button yellow" for="tag4"></label>
+                                <input type="radio" id="tag5" name="colorTag" value="red" ngModel  #name="ngModel"  class="form-control" >
+                                <label class=" cd-button red" for="tag5"></label>
+                                <input type="radio" id="tag6" name="colorTag" value="purple" ngModel  #name="ngModel"  class="form-control" >
+                                <label class=" cd-button purple" for="tag6"></label>
+                                </div>
+                                
+                                
+                              </div>  
+                          
                         </div>
                     </div>
                     <div class="row">
@@ -53,7 +68,7 @@
                 </form>
                 <div>
                        <button class="col-xs-12 col-md-4 myCol"
-                           (click)="onClickCanSave()">
+                           >
                            Submit
                        </button>
                     </div>
