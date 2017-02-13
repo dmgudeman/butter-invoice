@@ -1,0 +1,82 @@
+<p>
+  company-details works!
+</p>
+<!-- NAVIGATION -->
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-sm-12 col-md-6 ni-nav">
+            <div>
+                <a [routerLink]="['/home-app']" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></a>
+                <span>New Company</span>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <div class="row">
+        <div class="col-sm-12 col-md-5 col-md-offset-1">
+            <!--  FORM -->
+            <div class="co-details-body">
+                <form #f="ngForm" (ngSubmit)="onSubscribe(f.form)">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="form-group col-md-6">
+                                <label for="businessName">Business Name</label>
+                                <input [(ngModel)]="businessName"  name="businessName" #name="ngModel" id="businessName" type="text" class="form-control" >
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="colorTag">Color tag</label>
+                                <input ngModel name="colorTag" #name="ngModel" id="colorTag" type="text" class="form-control"  placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="form-group col-md-6">
+                                <label for="hourlyPay">Hourly pay</label>
+                                <input [(ngModel)]="hourlyPay"  name="hourlyPay" #name="ngModel" id="hourlyPay" type="text" class="form-control" >
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="paymentTerms">Payment terms</label>
+                                <input ngModel name="paymentTerms" #name="ngModel" id="paymentTerms" type="text" class="form-control"  placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="form-group col-md-6">
+                                <label for="activeCompany">Active company</label>
+                                <input [(ngModel)]="activeCompany"  name="activeCompany" #name="ngModel" id="activeCompany" type="text" class="form-control" >
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="colorTag">Color tag</label>
+                                <input ngModel name="colorTag" #name="ngModel" id="colorTag" type="text" class="form-control"  placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    
+                    <div>
+                       <button class="col-xs-12 col-md-4 ni-submit"
+                          
+                           (click)="onClickCanSave()">
+                           Submit
+                       </button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

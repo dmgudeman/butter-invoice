@@ -2,10 +2,12 @@ import { NgModule }              from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CompaniesComponent } from './company/companies.component';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { NewItemComponent } from './new-item/new-item.component';
 import { ItemComponent } from './item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
+
 
 
 const appRoutes: Routes = [
@@ -14,8 +16,7 @@ const appRoutes: Routes = [
   { path: 'new-item', component: NewItemComponent },
   { path: 'invoice/:id', component: InvoiceComponent },
   { path: 'invoice', component: InvoiceComponent },
-  // { path: 'client',      component: ClientComponent },
-  // {
+  { path: 'company-details', component:CompanyDetailsComponent },
   { path: '**', component: HomeComponent }
 ];
 

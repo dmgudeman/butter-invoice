@@ -20,6 +20,7 @@ import { ItemComponent } from './item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 
 
@@ -35,6 +36,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ItemComponent,
     InvoiceComponent,
     BootexComponent,
+    CompanyDetailsComponent,
   ],
   imports: [
     AppRoutingModule,

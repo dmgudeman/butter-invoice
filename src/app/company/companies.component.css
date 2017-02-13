@@ -11,10 +11,13 @@
 /* -------------------------------------------*/
 .co-navbar {
        
-       background-color: black;
-       color: white;
-       height: 45px;
+    background-color: black;
+    color: white;
+    height: 45px;
     }
+.co-navbar-plus{
+    color: #f2f2f2;
+}
 .co-body {
     max-width: 700px;
 }
