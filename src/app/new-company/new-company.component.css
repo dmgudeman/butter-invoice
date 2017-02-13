@@ -1,62 +1,92 @@
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
 *{
   box-sizing: border-box;
-    font-size: 20px;
-    max-width: 1200px;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight:300;
+  font-size: 20px;
+  max-width: 1700px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight:300;
+    
+ 
 }
 /*-----------------------------------------------------*/
-/*               NEW-ITEM NAV                          */
+/*               CO-DETAILS NAVBAR                     */
 /*-----------------------------------------------------*/
-.ni-nav{
-  margin: 10px 0;
+
+
+
+
+/*-----------------------------------------------------*/
+/*               CO-DETAILS HEADER                       */
+/*-----------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------*/
+/*               CO-DETAILS INPUTS                       */
+/*-----------------------------------------------------*/
+input[type=radio]{
+   display:none;
+   /*margin: 10px;*/
 }
-/*-----------------------------------------------------*/
-/*               NEW-ITEM HEADER                       */
-/*-----------------------------------------------------*/
+/*input[type=radio] + label*/
+.cd-button {
+    /*display:inline-block;*/
+    margin-right:10px;
+    padding:15px;
+    border-radius:35px;
+    color: white;
+    border: transparent 0px;;
+    width:35px;
+    height:35px;
 
-
-/*-----------------------------------------------------*/
-/*               NEW-ITEM INPUTS                       */
-/*-----------------------------------------------------*/
-
+}
+input[type=radio]:checked + label { 
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
 label {
    font-size: 75%;
 }
 
 .form-control {
+    
   font-size: 100%;
 }
-
-.ni-date{
-  width:100%; 
-}
-.ni-hours{
-  width: 100%;
-
-}
-.ni-notes {
-    width: 100%;
-    height: 300px;
-    resize: none;
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: #fff;
-    font-size: 100%;
+.cd-radio {
+   border-radius:200px;
+   margin: 5px;
+   height: 30px;
+   width: 30px;
 }
 
-.ni-submit {
-    font-size:90%;
-    box-sizing : border-box;
-    border-radius: 4px;
-    background-color: #34495e;
-    color:#f2f2f2;
-    margin: 15px;
-    max-width: 338px;
+.brown{
+    background-color: #8D6E63;
+}
+.blue{
+    background-color: #3498db;
+}
+.green{
+    background-color: #00C853;
+}
+.yellow {
+    background-color: #f1c40f;
+}
+.red{
+    background-color: #e74c3c;
+}
+.purple {
+    background-color: #9b59b6;
 }
 /*-----------------------------------------------------*/
-/*               NEW-ITEM NAVBAR                       */
+/*             CO-DETAILS DROP-DOWN                    */
+/*-----------------------------------------------------*/
+
+
+/*-----------------------------------------------------*/
+/*             CO-DETAILS SUBMIT BUTTON                */
 /*-----------------------------------------------------*/
 
 
@@ -66,15 +96,15 @@ label {
   .myCol{font-size:100%;
    box-sizing : border-box;
    border-radius: 0px;
-   border: transparent 0px;
-   background-color: #34495e;
-   color: #f2f2f2;
+    border: transparent 0px;
+    background-color: #34495e;
+    color: #f2f2f2;
    margin-left: -15px;
    width: 400px;
    position: fixed;
    bottom:0;
    margin-bottom: 0px;
-   line-height: 3.0;}
+    line-height: 3.0;}
 }
 /*screen-sm*/
 /*@media (min-width: 768px) and (max-width: 992px) { 

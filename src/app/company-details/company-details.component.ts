@@ -12,8 +12,5 @@ export class CompanyDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-getCSSClasses(){
-  let cssClasses;
-  if(window)
-}
+
 }

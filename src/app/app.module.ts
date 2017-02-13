@@ -21,6 +21,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
+import { NewCompanyComponent } from './new-company/new-company.component';
 
 
 
@@ -37,6 +38,7 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
     InvoiceComponent,
     BootexComponent,
     CompanyDetailsComponent,
+    NewCompanyComponent,
   ],
   imports: [
     AppRoutingModule,
