@@ -3,8 +3,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CompanyService {
+    
+    
     companies: Company[] = [
-        { id: 0, name: "Exxon", color: "green", hourly: 250 },
+        { id: 0, name: "Exxon", color: "green", hourly: 250, address: "exxon street 123"},
         { id: 1, name: "Texaco", color: "red", hourly: 225 },
         { id: 2, name: "Sinclair", color: "brown", hourly: 200 },
         { id: 3, name: "Shell", color: "yellow", hourly: 200 },

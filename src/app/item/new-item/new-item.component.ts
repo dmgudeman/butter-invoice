@@ -16,6 +16,7 @@ export class NewItemComponent implements OnInit {
   getHourly: Observable<number>
   hourly: number;
   companyName: string;
+  coId: number;
   uId: number;
   canSave = true;
   
@@ -23,9 +24,10 @@ export class NewItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+      this.route.params.subscribe(params => {
       this.hourly = params['hourly'];
       this.companyName = params['companyName'];
+      this.coId = params['coId'];
       this.uId = params['uId'];
     })
   }

@@ -17,7 +17,6 @@ export class Invoice  {
                 _ivItems: Item[], _ivCoId:number, _ivUid: number, _id?:number ) {
          if(!_id) {
              _id = this.makeInvoiceId();
-              console.log("constructor._id = " + _id);
          }
                
         
@@ -31,8 +30,7 @@ export class Invoice  {
         this.ivCoId= _ivCoId;
         this.ivUid = _ivUid;
         this.id = _id;
-         console.log("constructor.this.ivCoId = " + this.ivCoId +", _ivCoId = " + _ivCoId);
-         console.log("constructor.this.ivUid = " + this.ivUid +", _ivUid = " + _ivUid);
+         
     }
 
 makeInvoiceId(){

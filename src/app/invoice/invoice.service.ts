@@ -9,6 +9,7 @@ export class InvoiceService {
             new Invoice('Second Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(500, new Date(), 25, 18, 'Designed new company logo'),
                 new Item(501, new Date(), 15, 20, 'Translated 4 documents'),
+                new Item(506, new Date(), 50, 20, 'roughed out the back end')
             ], 1, 1,1001),
             new Invoice( 'Third Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(502, new Date(), 50, 18, 'Further Developed 2 ideas'),
