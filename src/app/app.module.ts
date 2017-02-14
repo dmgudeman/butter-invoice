@@ -14,7 +14,7 @@ import { InvoiceService } from './invoice/invoice.service';
 import { HomeComponent } from './home/home.component';
 import { CompaniesComponent } from './company/companies/companies.component';
 
-import { NewItemComponent } from './new-item/new-item.component';
+import { NewItemComponent } from './item/new-item/new-item.component';
 import { TabsModule } from 'ng2-bootstrap/tabs';
 import { ItemComponent } from './item/item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
