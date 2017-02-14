@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CompanyService } from './company.service';
-import { Company } from './company';
-import { InvoiceService } from '../invoice/invoice.service';
-import { Invoice } from '../invoice/invoice';
+import { CompanyService } from 'app/company/company.service';
+import { Company } from '../company';
+import { InvoiceService } from 'app/invoice/invoice.service';
+import { Invoice } from 'app/invoice/invoice';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 

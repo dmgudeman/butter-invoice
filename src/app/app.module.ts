@@ -11,20 +11,17 @@ import { ClientService } from './client.service';
 import { CompanyService } from './company/company.service';
 import { InvoiceService } from './invoice/invoice.service';
 
-
 import { HomeComponent } from './home/home.component';
-import { CompaniesComponent } from './company/companies.component';
+import { CompaniesComponent } from './company/companies/companies.component';
+
 import { NewItemComponent } from './new-item/new-item.component';
 import { TabsModule } from 'ng2-bootstrap/tabs';
 import { ItemComponent } from './item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CompanyDetailsComponent } from './company-details/company-details.component';
+import { CompanyDetailsComponent } from './company/company-details/company-details.component';
 import { NewCompanyComponent } from './new-company/new-company.component';
-
-
-
 
 
 @NgModule({
