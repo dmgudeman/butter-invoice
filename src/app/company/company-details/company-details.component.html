@@ -6,20 +6,32 @@
   <div class="flex-item" fxFlex="5%">
    <a [routerLink]="['/new-company']" class="co-navbar-plus" aria-hidden="true">+</a></div>
 </div>
-<div class="cd-body" 
-     fxLayout="row" 
-     fxLayout.xs="column"
-     fxLayoutAlign="center center"
-     fxLayoutGap.xs="5px"
-     fxLayoutWrap
-     >
+<div class="spacer">spacer</div>
+<div class="flex-container cd-midbar" fxLayout="row" [ngClass]="setColor(color)" fxLayoutAlign="center center">
+  <div class="flex-item" fxFlex="5%"></div>
+  <div class="flex-item" fxFlex="10%">id</div>
+  <div class="flex-item" fxFlex="70%"fxLayoutAlign="center center">Description</div>
+  <div class="flex-item" fxFlex="10%">hours</div>
+  <div class="flex-item" fxFlex="5%"></div>
+</div>
+<div *ngFor="let item of items" class="outer-div">
+    <div class="cd-row" fxLayout="row"  fxLayoutAlign="center center">
+       <div class="flex-item" fxFlex="5%"></div>
+       <div class="flex-item" fxFlex="10%">{{item.id}}</div>
+       <div class="flex-item" fxFlex="70%"fxLayoutAlign="center center">{{item.description}}</div>
+       <div class="flex-item" fxFlex="10%">{{item.hourly}}</div>
+       <div class="flex-item" fxFlex="5%"></div>
+</div>
 
- <div *ngFor="let item of items" class="outer-div">
-   <div class="flex-item" fxFlex="5%"></div>
-   <div class="flex-item cd-row" 
+
+
+
+<!--<div class="cd-body" fxLayout="row" fxLayoutAlign="center center">
+  <div class="flex-item" fxFlex="5%"></div>
+  <div class="flex-item cd-row" 
        fxFlex="20%"
        [ngClass]="setClasses(item)"
-       ><div fxLayout="row">
+       ><div >
            <span fxLayoutAlign="space-around" 
                  class="co-heading" >
                  <a  
@@ -29,14 +41,18 @@
                    {{item.id}}
                 </a></span>
         </div>
-        <div fxLayout="row" class="cd-description" >
-            {{item.description}}
-                 
-              
+        <div class="flex-item cd-description" fxFlex="40%" >
+            {{item.id}}
+        </div>
+        <div class="flex-item cd-description" fxFlex="20%" >
+            {{item.id}}
+        </div>
+        <div class="flex-item cd-description" fxFlex="15%" >
+            {{item.id}}
         </div>
       
      </div>
- </div>
+ </div>-->
 </div>
 <div>
                        <button class="col-xs-12 col-md-4 iv-submit"

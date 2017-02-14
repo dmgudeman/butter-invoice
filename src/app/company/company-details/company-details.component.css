@@ -19,18 +19,29 @@
 .co-navbar-plus{
     color: #f2f2f2;
 }
+.cd-midbar {
+       
+    background-color: black;
+    color: white;
+    height: 25px;
+    font-size: 15px;
+    }
 .cd-body {
     max-width: 700px;
 }
+.spacer{
+    height: 100px;
+    max-width: 70px;
 
+}
 /*----------------------------------------------------*/
 /*               COMPANY-DETAILS                         */
 /*----------------------------------------------------*/
 .cd-row {
     line-height: 2;
-    border-radius: 10px;
+  
     margin-top: 0px;
-    margin-right: 15px;
+    margin-right: 0px;
     font-size: 15px;
     color: black;
 }
