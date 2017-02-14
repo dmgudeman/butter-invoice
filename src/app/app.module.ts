@@ -21,7 +21,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CompanyDetailsComponent } from './company/company-details/company-details.component';
-import { NewCompanyComponent } from './new-company/new-company.component';
+import { NewCompanyComponent } from './company/new-company/new-company.component';
 
 
 @NgModule({
