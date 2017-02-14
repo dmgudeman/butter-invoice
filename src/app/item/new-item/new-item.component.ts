@@ -35,7 +35,6 @@ export class NewItemComponent implements OnInit {
   updateDate() {
     this.fdate = this.dateFormat(this.fdate, "mm/dd/yyyy")
   }
-
  
   onClickCanSave() {
     this.canSave = !this.canSave;

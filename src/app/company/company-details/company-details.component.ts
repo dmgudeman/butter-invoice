@@ -95,6 +95,9 @@ export class CompanyDetailsComponent implements OnInit {
 
   }
   setClasses(item){
+
+  }
+  getNothing() {
     
   }
 }
