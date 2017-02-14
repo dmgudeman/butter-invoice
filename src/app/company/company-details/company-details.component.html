@@ -6,18 +6,18 @@
   <div class="flex-item" fxFlex="5%">
    <a [routerLink]="['/new-company']" class="co-navbar-plus" aria-hidden="true">+</a></div>
 </div>
-<div class="co-body" 
+<div class="cd-body" 
      fxLayout="row" 
      fxLayout.xs="column"
      fxLayoutAlign="center center"
-     fxLayoutWrap
      fxLayoutGap.xs="5px"
+     fxLayoutWrap
      >
-</div> 
+
  <div *ngFor="let item of items" class="outer-div">
+   <div class="flex-item" fxFlex="5%"></div>
    <div class="flex-item cd-row" 
-       fxFlex="300px"
-       fxFlex.xs="40%"
+       fxFlex="20%"
        [ngClass]="setClasses(item)"
        ><div fxLayout="row">
            <span fxLayoutAlign="space-around" 
@@ -28,9 +28,15 @@
                    >
                    {{item.id}}
                 </a></span>
-                </div>
+        </div>
+        <div fxLayout="row" class="cd-description" >
+            {{item.description}}
+                 
+              
+        </div>
       
      </div>
+ </div>
 </div>
 <div>
                        <button class="col-xs-12 col-md-4 iv-submit"
