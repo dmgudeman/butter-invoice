@@ -16,7 +16,7 @@ import { CompaniesComponent } from './company/companies/companies.component';
 
 import { NewItemComponent } from './new-item/new-item.component';
 import { TabsModule } from 'ng2-bootstrap/tabs';
-import { ItemComponent } from './item/item.component';
+import { ItemComponent } from './item/item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';

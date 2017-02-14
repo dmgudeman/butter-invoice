@@ -5,7 +5,7 @@ import { CompaniesComponent } from './company/companies/companies.component';
 import { CompanyDetailsComponent } from './company/company-details/company-details.component';
 import { NewCompanyComponent } from './company/new-company/new-company.component';
 import { NewItemComponent } from './new-item/new-item.component';
-import { ItemComponent } from './item/item.component';
+import { ItemComponent } from './item/item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
 
