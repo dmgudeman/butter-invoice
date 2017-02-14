@@ -24,6 +24,7 @@ export class CompaniesComponent implements OnInit {
   ngOnInit() {
     this.companies = this.getCompanies();
     console.log("this.companies = " + JSON.stringify(this.companies));
+  
   }
   getCompanies(): Company[] {
     return this._companyService.getCompanies();
@@ -63,6 +64,17 @@ export class CompaniesComponent implements OnInit {
     let uId =4
     console.log(hourly);
     this.router.navigate(['/new-item', {hourly: hourly, companyName:companyName, uId:uId }]);
+  }
+  goToNewCompany(company:Company){
+    let hourly = company.hourly;
+    let companyName = company.name;
+    let coId = company.id;
+    let uId =4
+    console.log(hourly);
+    this.router.navigate(['/company-details', {hourly: hourly, 
+                                           name:companyName, 
+                                           uId:uId,
+                                           id:coId}]);
   }
 }
 

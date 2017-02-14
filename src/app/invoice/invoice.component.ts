@@ -27,10 +27,8 @@ export class InvoiceComponent implements OnInit {
 
   ngOnInit() {
     this.getInvoice();
-    console.log ("OnInit JSON.stringify(this.invoice) = "+JSON.stringify(this.invoice));
-   
-     this.updateFromDate(); 
-     this.updateToDate(); 
+    this.updateFromDate(); 
+    this.updateToDate(); 
   }
   updateFromDate(){
     this.fromDate = this.dateFormat(this.fromDate, "mm/dd/yyyy");
@@ -45,7 +43,6 @@ export class InvoiceComponent implements OnInit {
   canSave = true;
   onClickCanSave() {
     this.canSave = !this.canSave;
-    console.log(this.canSave);
   } 
 
   getInvoice(){

@@ -1,0 +1,25 @@
+<div class="flex-container co-navbar" fxLayout="row" [ngClass]="setColor(color)" fxLayoutAlign="center center">
+  <div class="flex-item" fxFlex="5%"></div>
+  <div class="flex-item" fxFlex="10%"><i class="glyphicon glyphicon-tower"></i></div>
+  <div class="flex-item" fxFlex="70%"fxLayoutAlign="center center">{{name + " Details"}}</div>
+  <div class="flex-item" fxFlex="10%"></div>
+  <div class="flex-item" fxFlex="5%">
+   <a [routerLink]="['/new-company']" class="co-navbar-plus" aria-hidden="true">+</a></div>
+</div>
+<div class="co-body" 
+     fxLayout="row" 
+     fxLayout.xs="column"
+     fxLayoutAlign="center center"
+     fxLayoutWrap
+     fxLayoutGap.xs="5px"
+     >
+</div> 
+
+
+
+
+
+
+
+
+

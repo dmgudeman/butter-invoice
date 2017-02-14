@@ -21,6 +21,11 @@ export class CompanyService {
     }
     
     getCompany(id:number) {
-        return this.companies[id];
+        // return this.companies[id];
+    };
+    getCompanyById(companyId: number): Promise<Company>{
+         let foundCompany = this.getCompanies().find(item =>(item.id === companyId));
+       return Promise.resolve(foundCompany);
+
     }
 }

@@ -20,7 +20,13 @@
        [ngClass]="setClasses(company )"
        >
            <span fxLayoutAlign="space-around" 
-                 class="co-heading" >{{company.name}}</span>
+                 class="co-heading" >
+                 <a class="co-button" 
+                   (click)="goToNewCompany(company)"  
+                   aria-hidden="true"
+                   >
+                   {{company.name}}
+                </a></span>
       <div fxLayout="row">
             <div class="col co-button co-left"   
                  fxLayoutAlign="center center" 
