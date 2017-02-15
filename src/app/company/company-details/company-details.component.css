@@ -97,7 +97,12 @@ cd-description{
 .purple.co-button {
     background-color: #a265bb;
 }
-
+.one{
+   background-color: black;
+}
+.two{
+   background-color: green;
+}
 /*screen-xs*/
 @media (max-width: 768px) { 
   .myCol{font-size:100%;
@@ -112,10 +117,17 @@ cd-description{
    bottom:0;
    margin-bottom: 0px;
    line-height: 3.0;}
+  .med{display: none !important;}
+ 
+   
+
 }
 /*screen-sm*/
 /*@media (min-width: 768px) and (max-width: 992px) { 
   .myCol{background-color:green;}
+    .med{display: none;
+    background-color:green;}
+    .small{background-color: green}
 }*/
 /*screen-md*/
 /*@media (min-width: 992px) and (max-width: 1200px) { 
@@ -128,6 +140,9 @@ cd-description{
     color: #f2f2f2;
     margin: 15px;
     line-height: 2.0;}
+      .med{display: none;
+       background-color: blue;}
+
 }*/
 /*screen-lg corresponds with col-lg*/
 @media (min-width: 1200px) {  
@@ -140,5 +155,9 @@ cd-description{
     color: #f2f2f2;
     margin: 15px;
     line-height: 2.0;}
+    .small{ display: none;}
+      
+     
 }
+
 

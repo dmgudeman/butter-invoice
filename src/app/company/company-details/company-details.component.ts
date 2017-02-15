@@ -22,6 +22,8 @@ export class CompanyDetailsComponent implements OnInit {
   color: string;
   hourly: number;
   items: Item[] = [];
+  xsClassBool =false;
+  mdClassBool =true;
 
   constructor(
     private _companyService: CompanyService,
