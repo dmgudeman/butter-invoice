@@ -6,27 +6,28 @@
     <div class="flex-item" fxFlex="5%">
         <a [routerLink]="['/new-company']" class="co-navbar-plus" aria-hidden="true">+</a></div>
 </div>
-<div class="spacer">spacer</div>
+<div class="spacer">address goes here</div>
 <div class="flex-container cd-midbar" fxLayout="row" [ngClass]="setColor(color)" fxLayoutAlign="center center">
-    <div class="flex-item" fxFlex="5%" fxLayoutAlign="center center"></div>
-    <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">id</div>
-    <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">date</div>
+    <div class="flex-item" fxFlex="5%" fxFlex.xs="0%" fxLayoutAlign="center center"></div>
+    <!--<div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">id</div>-->
+    <div class="flex-item" fxFlex="10%" fxFlex.xs="15%" fxLayoutAlign="center center">date</div>
     <div class="flex-item" fxFlex="40%" fxLayoutAlign="center center">Description</div>
-    <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">amount</div>
-    <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">hours</div>
-    <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">coId</div>
-    <div class="flex-item" fxFlex="5%" fxLayoutAlign="center center"></div>
+    <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">amt</div>
+    <div class="flex-item" fxFlex="10%" fxFlex.xs="16%" fxLayoutAlign="center center">hours</div>
+    <div class="flex-item" fxFlex="10%" fxFlex.xs="9%" fxLayoutAlign="center center">coId</div>
+    <div class="flex-item" fxFlex="5%"  fxFlex.xs="0%"  fxLayoutAlign="center center"></div>
 </div>
 <div *ngFor="let item of items">
     <div class="cd-row" fxLayout="row" fxLayoutAlign="center center">
-        <div class="flex-item" fxFlex="5%" fxLayoutAlign="center center"></div>
-        <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{item.id}}</div>
-        <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center"></div>
-        <div class="flex-item" fxFlex="40%" fxLayoutAlign="center center" >{{item.description}}</div>
-        <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{item.amount}}</div>
-        <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{item.hourly}}</div>
+        <div class="flex-item" fxFlex="5%" fxFlex.xs="0%" fxLayoutAlign="center center"></div>
+        <!--<div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{item.id}}</div>-->
+        <div class="flex-item" fxFlex="10%" fxFlex.xs="15%" fxLayoutAlign="center center">{{item.date | date:'shortDate'}}</div>
+        <div class="flex-item md" fxFlex="40%" fxLayoutAlign="center center" >{{item.description |truncate:15 }}</div>
+       
+        <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{"$ "+item.amount}}</div>
+        <div class="flex-item" fxFlex="10%" fxFlex.xs="15%" fxLayoutAlign="center center">{{item.hours}}</div>
         <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{item.coId}}</div>
-        <div class="flex-item" fxFlex="5%" fxLayoutAlign="center center"></div>
+        <div class="flex-item" fxFlex="5%" fxFlex.xs="0%" fxLayoutAlign="center center"></div>
     </div>
 
 </div>

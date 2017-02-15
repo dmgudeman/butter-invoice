@@ -11,7 +11,7 @@ export class Item {
         id: number,
         public date: Date,
         public hours: number,
-        public hourly: number,
+        public amount: number,
         public description: string,
         public coId?:number) {
         if (id) {

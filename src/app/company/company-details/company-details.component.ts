@@ -28,7 +28,7 @@ export class CompanyDetailsComponent implements OnInit {
     private _invoiceService: InvoiceService,
     private router: Router,
     private route: ActivatedRoute) { };
-
+    
   ngOnInit() {
     this.company = this.getCompany();
     this.items = this.getItemsByInvoices(); 
@@ -46,7 +46,8 @@ export class CompanyDetailsComponent implements OnInit {
     let invoices = this._invoiceService.getInvoices();
 
     for (let i = 0, len = invoices.length; i < len; i++){
-         this.getItemsByInvoiceHelper(invoices[i])
+         this.getItemsByInvoiceHelper(invoices[i]);
+
     }
     console.log("this.items.length = " + this.items.length);
     return this.items;
@@ -56,6 +57,7 @@ export class CompanyDetailsComponent implements OnInit {
   
     for( let i = 0; i < newItems.length ; i++){
       if (newItems[i]){
+       
         this.items.push(newItems[i]);
       }
     }
@@ -82,9 +84,8 @@ export class CompanyDetailsComponent implements OnInit {
     this.route.params
 
       .switchMap((params: Params) => this._companyService.getCompanyById(+params['id']))
-      .subscribe(companyx => {
-        this.company = companyx;
-        this.hourly = this.company.hourly;
+      .subscribe(company => {
+        this.company = company;
         this.id = this.company.id;
         this.name = this.company.name;
         this.color = this.company.color;
@@ -92,12 +93,16 @@ export class CompanyDetailsComponent implements OnInit {
         return this.company;
 
       });
-
   }
-  setClasses(item){
-
+ 
+  myClasses = {xs:false, md:false}
+  setClassesMd() {
+    this.myClasses.md =true;
+  }
+  setClassesXs() {
+    this.myClasses.xs =true;
   }
   getNothing() {
-    
+
   }
 }

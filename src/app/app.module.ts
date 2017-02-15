@@ -22,6 +22,7 @@ import { BootexComponent } from './bootex/bootex.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CompanyDetailsComponent } from './company/company-details/company-details.component';
 import { NewCompanyComponent } from './company/new-company/new-company.component';
+import { TruncatePipe } from './shared/truncate.pipe';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { NewCompanyComponent } from './company/new-company/new-company.component
     BootexComponent,
     CompanyDetailsComponent,
     NewCompanyComponent,
+    TruncatePipe,
   ],
   imports: [
     AppRoutingModule,
