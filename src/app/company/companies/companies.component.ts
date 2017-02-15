@@ -59,12 +59,13 @@ export class CompaniesComponent implements OnInit {
   }
 
   goToNewItem(company:Company){
+    let title = "New Item";
     let hourly = company.hourly;
     let companyName = company.name;
     let uId =4;
     let coId = company.id;
     console.log(hourly);
-    this.router.navigate(['/new-item', {hourly: hourly, companyName:companyName, coId: coId, uId:uId }]);
+    this.router.navigate(['/new-item', {hourly: hourly, companyName:companyName, coId: coId, uId:uId , title: title}]);
   }
   goToNewCompany(company:Company){
     let hourly = company.hourly;

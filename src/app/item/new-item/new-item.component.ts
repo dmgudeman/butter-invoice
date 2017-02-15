@@ -18,6 +18,7 @@ export class NewItemComponent implements OnInit {
   companyName: string;
   coId: number;
   uId: number;
+  title: string;
   canSave = true;
   
   constructor(private route: ActivatedRoute) {
@@ -29,6 +30,7 @@ export class NewItemComponent implements OnInit {
       this.companyName = params['companyName'];
       this.coId = params['coId'];
       this.uId = params['uId'];
+      this.title = params['title'];
     })
   }
 

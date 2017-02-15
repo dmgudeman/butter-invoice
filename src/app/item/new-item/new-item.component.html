@@ -4,7 +4,7 @@
         <div class=" col-sm-12 col-md-6 ni-nav">
             <div>
                 <a [routerLink]="['/home-app']" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></a>
-                <span>New Item</span>
+                <span>{{title}}</span>
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@
                            Submit
                        </button>
                     </div>
-                    {{"hourly: " + hourly}}<br>{{" companyName: " + companyName}}<br> {{" user Id: " + uId}}
+                    {{"hourly: " + hourly}}<br>{{" companyName: " + companyName}}<br> {{" user Id: " + uId}}<br> {{"title: " + title}}
                 </form>
             </div>
         </div>

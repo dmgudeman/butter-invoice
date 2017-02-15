@@ -75,11 +75,12 @@ export class CompanyDetailsComponent implements OnInit {
   }
 
   goToNewItem(company: Company) {
+    let title= "Edit Item"
     let hourly = company.hourly;
     let companyName = company.name;
     let uId = 4
     console.log(hourly);
-    this.router.navigate(['/new-item', { hourly: hourly, companyName: companyName, uId: uId }]);
+    this.router.navigate(['/new-item', { hourly: hourly, companyName: companyName, uId: uId, title: title}]);
   }
   getCompany() {
 
