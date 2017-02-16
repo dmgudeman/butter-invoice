@@ -14,7 +14,7 @@
     <div class="flex-item" fxFlex="40%" fxLayoutAlign="center center">Description</div>
     <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">amt</div>
     <div class="flex-item" fxFlex="10%" fxFlex.xs="16%" fxLayoutAlign="center center">hours</div>
-    <div class="flex-item" fxFlex="10%" fxFlex.xs="9%" fxLayoutAlign="center center">coId</div>
+    <div class="flex-item" fxFlex="10%" fxFlex.xs="9%" fxLayoutAlign="center center">delete</div>
     <div class="flex-item" fxFlex="5%"  fxFlex.xs="0%"  fxLayoutAlign="center center"></div>
 </div>
 <div *ngFor="let item of items">
@@ -48,7 +48,16 @@
         
         <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{"$ "+item.amount}}</div>
         <div class="flex-item" fxFlex="10%" fxFlex.xs="15%" fxLayoutAlign="center center">{{item.hours}}</div>
-        <div class="flex-item" fxFlex="10%" fxLayoutAlign="center center">{{item.coId}}</div>
+        <div 
+            class="flex-item" 
+            fxFlex="10%" 
+            fxLayoutAlign="center center"
+        >
+            <i 
+                (click)="deleteUser()" 
+                class="glyphicon glyphicon-remove clickable">
+            </i>
+        </div>
         <div class="flex-item" fxFlex="5%" fxFlex.xs="0%" fxLayoutAlign="center center"></div>
     </div>
 </div>

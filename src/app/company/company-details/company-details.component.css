@@ -105,14 +105,14 @@ cd-description{
 }
 /*screen-xs*/
 @media (max-width: 768px) { 
-  .myCol{font-size:100%;
+  .myCol{font-size:120%;
    box-sizing : border-box;
    border-radius: 0px;
    border: transparent 0px;
    background-color: #34495e;
    color: #f2f2f2;
-   margin-left: -15px;
-   width: 400px;
+   margin-left: -10px;
+   width: 415px;
    position: fixed;
    bottom:0;
    margin-bottom: 0px;

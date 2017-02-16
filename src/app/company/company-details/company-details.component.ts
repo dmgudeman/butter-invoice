@@ -83,9 +83,7 @@ export class CompanyDetailsComponent implements OnInit {
     this.router.navigate(['/new-item', { hourly: hourly, companyName: companyName, uId: uId, title: title}]);
   }
   getCompany() {
-
     this.route.params
-
       .switchMap((params: Params) => this._companyService.getCompanyById(+params['id']))
       .subscribe(company => {
         this.company = company;
@@ -94,7 +92,6 @@ export class CompanyDetailsComponent implements OnInit {
         this.color = this.company.color;
         this.hourly = this.company.hourly;
         return this.company;
-
       });
   }
  
@@ -108,4 +105,5 @@ export class CompanyDetailsComponent implements OnInit {
   getNothing() {
 
   }
+  deleteUser(){}
 }
