@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TabsModule } from 'ng2-bootstrap/tabs';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import {IMyOptions, IMyDateModel} from 'mydatepicker';
 
 
 @Component({
@@ -10,6 +11,11 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./new-item.component.css']
 })
 export class NewItemComponent implements OnInit {
+  private myDatePickerOptions: IMyOptions = {
+    dateFormat: 'mm/dd/yyyy',
+   
+  };
+
   date = new Date();
   dateFormat = require('dateformat');
   fdate: Date = new Date();
@@ -20,7 +26,7 @@ export class NewItemComponent implements OnInit {
   uId: number;
   title: string;
   canSave = true;
-  
+
   constructor(private route: ActivatedRoute) {
   }
 
@@ -34,10 +40,12 @@ export class NewItemComponent implements OnInit {
     })
   }
 
+    onDateChanged(event: IMyDateModel){
+}
   updateDate() {
     this.fdate = this.dateFormat(this.fdate, "mm/dd/yyyy")
   }
- 
+
   onClickCanSave() {
     this.canSave = !this.canSave;
   }

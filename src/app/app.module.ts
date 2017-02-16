@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { DatepickerModule } from 'angular2-material-datepicker';
+import { MyDatePickerModule } from 'mydatepicker';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
@@ -23,6 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CompanyDetailsComponent } from './company/company-details/company-details.component';
 import { NewCompanyComponent } from './company/new-company/new-company.component';
 import { TruncatePipe } from './shared/truncate.pipe';
+
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { TruncatePipe } from './shared/truncate.pipe';
     FlexLayoutModule.forRoot(),
     FormsModule,
     HttpModule,
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    DatepickerModule,
+    MyDatePickerModule
+
   ],
   providers: [
     ClientService,

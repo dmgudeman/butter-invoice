@@ -116,9 +116,11 @@ cd-description{
    position: fixed;
    bottom:0;
    margin-bottom: 0px;
+   
    line-height: 3.0;}
   .med{display: none !important;}
- 
+  .small{margin-left:10px;}
+  
    
 
 }

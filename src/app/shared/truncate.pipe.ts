@@ -8,7 +8,7 @@ export class TruncatePipe implements PipeTransform {
   newString:string= '';
   transform(description:string, descLength:number): string {
     if (description.length > descLength){
-     this.newString = description.slice(0, descLength);
+     this.newString = description.slice(0, descLength) + "...";
      console.log("this.newString =" + this.newString)
     return this.newString;}
     return description;
