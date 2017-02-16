@@ -50,7 +50,7 @@ export class CompaniesComponent implements OnInit {
   goToInvoice(company:Company) {
     let uId = 1;
     let coId = company.id;
-    this.invoice = this._invoiceService.makeInvoice(uId,coId);
+    this.invoice = this._invoiceService.makeAndAddInvoice(uId,coId);
     this.router.navigate(['/invoice', this.invoice.id ]);
 
   }

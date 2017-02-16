@@ -8,7 +8,7 @@ import { NewItemComponent } from './item/new-item/new-item.component';
 import { ItemComponent } from './item/item/item.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BootexComponent } from './bootex/bootex.component';
-
+import { InvoiceListComponent } from './invoice/invoice-list/invoice-list.component';
 
 
 const appRoutes: Routes = [
@@ -19,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'invoice', component: InvoiceComponent },
   { path: 'new-company', component:NewCompanyComponent },
   { path: 'company-details', component:CompanyDetailsComponent },
+  { path: 'invoice-list', component:InvoiceListComponent},
   { path: '**', component: HomeComponent }
 ];
 

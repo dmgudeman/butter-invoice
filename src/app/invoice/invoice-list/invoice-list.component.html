@@ -1,0 +1,12 @@
+<h1>Tour of Invoicess ({{mode}})</h1>
+<h3>Invoices:</h3>
+<ul>
+  <li *ngFor="let invoice of invoices">{{invoice.ivTitle}}</li>
+</ul>
+
+<label>New user Id: <input #newUid /></label>
+<label>New company Id: <input #newCoId /></label>
+<button (click)="makeAndAddInvoice(newUid.value, newCoId.value)">Add Invoice</button>
+
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+

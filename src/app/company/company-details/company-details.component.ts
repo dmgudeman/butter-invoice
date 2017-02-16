@@ -67,7 +67,7 @@ export class CompanyDetailsComponent implements OnInit {
   goToInvoice(company: Company) {
     let uId = 1;
     let coId = company.id;
-    this.invoice = this._invoiceService.makeInvoice(uId, coId);
+    this.invoice = this._invoiceService.makeAndAddInvoice(uId, coId);
     this.router.navigate(['/invoice', this.invoice.id]);
   }
 
@@ -77,6 +77,13 @@ export class CompanyDetailsComponent implements OnInit {
     let companyName = company.name;
     let uId = 4
     this.router.navigate(['/new-item', { hourly: hourly, companyName: companyName, uId: uId, title: title}]);
+  }
+
+  goToInvoiceList(company: Company) {
+    let title= "Invoice List"
+    let coId = company.id;
+    let uId = 4
+    this.router.navigate(['/invoice-list', { coId: coId, uId: uId, title: title}]);
   }
   getCompany() {
     this.route.params

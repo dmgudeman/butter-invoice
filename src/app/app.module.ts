@@ -7,6 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { DatepickerModule } from 'angular2-material-datepicker';
 import { MyDatePickerModule } from 'mydatepicker';
 
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './shared/in-memory-data.service';
+
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { ClientService } from './client.service';
@@ -25,6 +29,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CompanyDetailsComponent } from './company/company-details/company-details.component';
 import { NewCompanyComponent } from './company/new-company/new-company.component';
 import { TruncatePipe } from './shared/truncate.pipe';
+import { InvoiceListComponent } from './invoice/invoice-list/invoice-list.component';
 
 
 
@@ -41,6 +46,7 @@ import { TruncatePipe } from './shared/truncate.pipe';
     CompanyDetailsComponent,
     NewCompanyComponent,
     TruncatePipe,
+    InvoiceListComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -50,7 +56,8 @@ import { TruncatePipe } from './shared/truncate.pipe';
     HttpModule,
     TabsModule.forRoot(),
     DatepickerModule,
-    MyDatePickerModule
+    MyDatePickerModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
 
   ],
   providers: [

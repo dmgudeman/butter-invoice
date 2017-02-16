@@ -59,4 +59,8 @@ export class InvoiceComponent implements OnInit {
 
     console.log("this.invoice.ivTitle " + this.invoice.ivTitle);
   }
+  makeAndAddInvoice(uId:number, coId:number ){
+    
+   this._invoiceService.makeAndAddInvoice(uId,coId);
+  }
 }
