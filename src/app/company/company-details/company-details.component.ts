@@ -58,10 +58,13 @@ export class CompanyDetailsComponent implements OnInit {
   
     for( let i = 0; i < newItems.length ; i++){
       if (newItems[i]){
-       
         this.items.push(newItems[i]);
       }
     }
+  }
+  getInvoiceByInvoiceId (invoice: Invoice){
+    let invoiceId = invoice.id;
+    let popInvoice = this._invoiceService.getInvoiceById(invoiceId);
   }
  
   goToInvoice(company: Company) {
@@ -101,5 +104,13 @@ export class CompanyDetailsComponent implements OnInit {
   getNothing() {
 
   }
-  deleteUser(){}
+  deleteItemByItemId(item:Item){
+
+  if (confirm("Are you sure you want to delete item number " + item.id+ "?")) {
+      console.log("items.length = " + this.items.length);
+			this._invoiceService.deleteItemByItemId(item);
+      this.items.splice(item.id, 1);
+      console.log("items.length = " + this.items.length);
+  }
+  }
 }

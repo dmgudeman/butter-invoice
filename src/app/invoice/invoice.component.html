@@ -15,9 +15,19 @@
             <div class="iv-body">
                 <form #f="ngForm" (ngSubmit)="onSubscribe(f.form)">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="form-group col-sm-12" >
+                            <label for="mydaterange" class="iv-my-daterangepicker">Date Range</label><br>
+                            <my-date-range-picker 
+                                 name="mydaterange" 
+                                 [options]="myDateRangePickerOptions"
+                                 (dateRangeChanged)="onDateRangeChanged($event)"
+                                 [(ngModel)]="model" 
+                                 class="iv-my-daterangepicker"
+                                 id="iv-my-daterangepicker"
+                            >
+                            </my-date-range-picker>
 
-                            <div class="form-group col-md-6">
+                            <!--<div class="form-group col-md-6">
                                 <label for="fromdate">From Date</label>
                                 <input [(ngModel)]=fromDate 
                                        (change)="updateFromDate()" 
@@ -38,8 +48,8 @@
                                        type="text" 
                                        class="form-control" 
                                 >
-                            </div>
-                            <div class="form-group col-md-6">
+                            </div>-->
+                            <div class="form-group col-md-12">
                                 <label for="discountAmount">Discount</label>
                                 
                                 <div class="input-group">
@@ -70,7 +80,6 @@
                            Submit
                        </button>
                     </div>
-                    {{title}}
                 </form>
             </div>
         </div>

@@ -13,10 +13,9 @@ export class Item {
         public hours: number,
         public amount: number,
         public description: string,
-        public coId?:number) {
-        if (id) {
-            this.id = id;
-        }
+        public coId?:number
+        ){}
+     
     }
 
-}
+

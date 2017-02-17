@@ -1,8 +1,9 @@
+import { IMyOptions, IMyDateModel } from 'mydatepicker';
 import { Component, OnInit } from '@angular/core';
 import { TabsModule } from 'ng2-bootstrap/tabs';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import {IMyOptions, IMyDateModel} from 'mydatepicker';
+
 
 
 @Component({
@@ -40,8 +41,9 @@ export class NewItemComponent implements OnInit {
     })
   }
 
-    onDateChanged(event: IMyDateModel){
-}
+  onDateChanged(event: IMyDateModel){
+  }
+  
   updateDate() {
     this.fdate = this.dateFormat(this.fdate, "mm/dd/yyyy")
   }

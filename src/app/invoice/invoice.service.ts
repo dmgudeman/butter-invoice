@@ -3,8 +3,9 @@ import { Item } from '../item/item';
 export class InvoiceService {
     id:number; 
     invoice: Invoice;
-    invoices = [new Invoice('First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!",[
-                new Item(505, new Date(), 5, 20, 'Baked and Iced cake',3),
+    invoices = [
+            new Invoice('First Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!",[
+                 new Item(505, new Date(), 5, 20, 'Baked and Iced cake',3),
             ] ,1,1,1000),
             new Invoice('Second Invoice', '02/01/2017', '03/01/2017',0,0,"This is it!", [
                 new Item(500, new Date(), 25, 18, 'Designed new company logo',2),
@@ -16,7 +17,8 @@ export class InvoiceService {
                 new Item(503, new Date(), 70, 18, 'Did face-painting at party',1),
                 new Item(504, new Date(), 30, 18, 'Submitted 10 initial ideas',1),
             ],1,1,1002)
-        ]
+            ]
+        
     constructor () {}
     ngOnInit () {
         this.invoices = this.getInvoices();
@@ -31,7 +33,7 @@ export class InvoiceService {
          let foundInvoice = this.getInvoices().find(item =>(item.id === invoiceId));
          console.log("getInvoiceById invoiceId = " + invoiceId);
          console.log("getInvoiceById this.invoices.length = " +this.invoices.length)
-          console.log ("getInvoiceById JSON.stringify(foundInvoice) = "+JSON.stringify(foundInvoice));
+         console.log ("getInvoiceById JSON.stringify(foundInvoice) = "+JSON.stringify(foundInvoice));
        return Promise.resolve(foundInvoice);
     };
     makeInvoice( uId:number, coId:number ){ 
@@ -73,6 +75,21 @@ export class InvoiceService {
       }
       getInvoices(){
           return this.invoices;
-      }     
-      
+      } 
+      deleteItemByItemId(newItem: Item){
+        let itemId = newItem.id;
+		let invoices = this.getInvoices();
+        let item: Item
+        let items: Item[];
+        for (let i = 0; i <invoices.length; i++){
+           items = invoices[i].ivItems;
+           for (let j = 0; j < items.length; j++){
+               if (items[j].id === itemId){
+                   console.log("removing items[j].id " + items[j].id);
+                items.splice(j, 1);
+               }
+          }
+	   }
+       
+    }  
 }

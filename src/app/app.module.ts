@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { DatepickerModule } from 'angular2-material-datepicker';
 import { MyDatePickerModule } from 'mydatepicker';
+import { MyDateRangePickerModule } from 'mydaterangepicker';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
@@ -50,7 +51,8 @@ import { TruncatePipe } from './shared/truncate.pipe';
     HttpModule,
     TabsModule.forRoot(),
     DatepickerModule,
-    MyDatePickerModule
+    MyDatePickerModule,
+    MyDateRangePickerModule
 
   ],
   providers: [
