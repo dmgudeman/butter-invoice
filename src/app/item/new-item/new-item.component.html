@@ -3,7 +3,10 @@
     <div class="row">
         <div class=" col-sm-12 col-md-6 ni-nav">
             <div>
-                <a [routerLink]="['/home-app']" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></a>
+                <a [routerLink]="['/home-app']" 
+                    class="glyphicon glyphicon-chevron-left" 
+                    aria-hidden="true">
+                </a>
                 <span>{{title}}</span>
             </div>
         </div>
@@ -11,7 +14,7 @@
     <!-- HEADER -->
     <div class="row">
         <div class="col-sm-12 col-md-5 col-md-offset-1">
-            <tabset class="ni-header col-md-12">
+            <tabset style="color: blueviolet !important"class="ni-header col-md-12">
                 <tab heading="Time"></tab>
                 <tab>
                     <template tabHeading>
@@ -24,14 +27,19 @@
                 <form #f="ngForm" (ngSubmit)="onSubscribe(f.form)" novalidate>
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="form-group col-md-6">
-                                <label for="date">Date</label><br>
+                            <div class="form-group col-md-6" >
+                                <label for="mydate">Date</label><br>
                                 <my-date-picker 
                                     name="mydate" 
                                     [options]="myDatePickerOptions" 
-                                    [(ngModel)]="model" 
-                                    class="ni-my-datepicker">
+                                    [selDate]="selDate"
+                                    [(ngModel)]="model"
+                                    (dateChanged)="onDateChanged($event)" 
+                                    class="ni-my-datepicker"
+                                    id="date"
+                                    >
                                 </my-date-picker>
+                                
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="hours">Hours</label>
@@ -53,7 +61,8 @@
                             id="notes" 
                             type="textbox" 
                             class="form-control ni-notes" 
-                            placeholder="Type Here">
+                            placeholder="Type Here"
+                            id="notes">
                         </textarea>
                     </div>
                     <div>

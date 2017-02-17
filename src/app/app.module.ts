@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { DatepickerModule } from 'angular2-material-datepicker';
+
 import { MyDatePickerModule } from 'mydatepicker';
 
 // Imports for loading & configuring the in-memory web api
@@ -49,13 +49,12 @@ import { InvoiceListComponent } from './invoice/invoice-list/invoice-list.compon
     InvoiceListComponent,
   ],
   imports: [
+    HttpModule,
     AppRoutingModule,
     BrowserModule,
     FlexLayoutModule.forRoot(),
     FormsModule,
-    HttpModule,
     TabsModule.forRoot(),
-    DatepickerModule,
     MyDatePickerModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
 

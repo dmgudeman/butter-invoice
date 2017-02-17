@@ -1,7 +1,6 @@
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 * {
     box-sizing: border-box;
-   
     max-width: 700px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight:300;
@@ -48,7 +47,7 @@
     font-size: 15px;
     color: black;
 }
-cd-description{
+.cd-description{
     font-size: 70%;
 }
 

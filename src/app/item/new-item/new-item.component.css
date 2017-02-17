@@ -1,54 +1,49 @@
+
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
 * {
     box-sizing: border-box;
     font-size: 20px;
     max-width: 1200px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
+    color:red !important;
+    background-color: #fff;
 }
 
 
 /*-----------------------------------------------------*/
-
-
 /*               NEW-ITEM NAV                          */
-
-
 /*-----------------------------------------------------*/
 
 .ni-nav {
     margin: 10px 0;
 }
-
-
-/*-----------------------------------------------------*/
-
-
-/*               NEW-ITEM HEADER                       */
-
+.ni-header{
+    color:blue;
+}
 
 /*-----------------------------------------------------*/
-
-
-/*-----------------------------------------------------*/
-
-
 /*               NEW-ITEM INPUTS                       */
-
-
 /*-----------------------------------------------------*/
 
+form-group{
+    color: black;
+
+}
 label {
     font-size: 75%;
 }
 
 .form-control {
     font-size: 100%;
+    
 }
 
-.ni-my-datepicker {
+#date .ni-my-datepicker .selector my-date-picker {
     width: 300px;
     border-radius: 4px;
+    color: blue !important;
 }
 /*.mydp {
     /*min-width: 30px;
@@ -84,8 +79,11 @@ label {
 
 .ni-date {
     width: 100%;
+     color: black !important;
 }
-
+span{
+    color: blue;
+}
 .ni-hours {
     width: 100%;
 }
@@ -98,6 +96,7 @@ label {
     border-radius: 4px;
     background-color: #fff;
     font-size: 100%;
+     color: black !important;
 }
 
 .ni-submit {
@@ -178,5 +177,21 @@ label {
         margin: 15px;
         line-height: 2.0;
     }
+}
+#hours{
+color: red !important;
+
+}
+#date{
+    color:red !important;
+}
+textarea#notes{
+    color: red !important;
+}
+.nav-tabs>li.active>a{
+    color: red !important;
+}
+.nav-tabs>li>a {
+    color: aqua;
 }
 
